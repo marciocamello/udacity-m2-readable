@@ -11,7 +11,16 @@
 ### Structure
 
 ```
-Frontend
+api
+├── README.md - This file.
+├── package.json # npm package manager file. It's unlikely that you'll need to modify this.
+├── server.js # Server instance
+├── config.js # Server settings params
+├── categories.js # Categories methods from API
+├── posts.js # Posts methods from API
+├── comments.js # Comments methods from API
+
+frontend
 ├── README.md - This file.
 ├── cypress # Is a tool to test this application
 ├── docs # Is a tool to generate docs using VuePressJS
