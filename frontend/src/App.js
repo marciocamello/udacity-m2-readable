@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {createMuiTheme, MuiThemeProvider, withStyles} from '@material-ui/core/styles';
 import {Route} from 'react-router-dom';
-import API from './API';
+import API from './api/ReadableAPI';
 
 // Custom theme
 const muiTheme = createMuiTheme({

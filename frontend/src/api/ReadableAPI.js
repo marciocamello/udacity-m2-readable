@@ -1,5 +1,5 @@
 // API url from backend server
-const api = "http://localhost:3001";
+const apiUrl = "http://localhost:3001";
 
 // Generate a unique token for storing your bookshelf data on the backend server.
 let token = localStorage.token;
@@ -12,9 +12,9 @@ const headers = {
 };
 
 /**
- * API Class
+ * ReadableAPI Class
  */
-class API {
+class ReadableAPI {
 
     /**
      * Get all of the categories available for the app. List is found in categories.js.
@@ -23,7 +23,7 @@ class API {
      * @returns {Promise<Response | never>}
      */
     categories = () => {
-        return fetch(`${api}/categories`, {headers})
+        return fetch(`${apiUrl}/categories`, {headers})
             .then(res => res.json())
             .then(data => data);
     };
@@ -35,7 +35,7 @@ class API {
      * @returns {Promise<Response | never>}
      */
     categoryPosts = category => {
-        return fetch(`${api}/${category}/posts`, {headers})
+        return fetch(`${apiUrl}/${category}/posts`, {headers})
             .then(res => res.json())
             .then(data => data);
     };
@@ -46,7 +46,7 @@ class API {
      * @returns {Promise<Response | never>}
      */
     posts = () => {
-        return fetch(`${api}/posts`, {headers})
+        return fetch(`${apiUrl}/posts`, {headers})
             .then(res => res.json())
             .then(data => {
                 return {
@@ -70,7 +70,7 @@ class API {
      * @returns {Promise<Response | never>}
      */
     addPost = post => {
-        return fetch(`${api}/posts`, {
+        return fetch(`${apiUrl}/posts`, {
             method: 'POST',
             headers: {
                 ...headers,
@@ -89,7 +89,7 @@ class API {
      * @returns {Promise<Response | never>}
      */
     post = id => {
-        return fetch(`${api}/posts/${id}`, {headers})
+        return fetch(`${apiUrl}/posts/${id}`, {headers})
             .then(res => res.json())
             .then(data => {
                 return {
@@ -106,7 +106,7 @@ class API {
      * @returns {Promise<Response | never>}
      */
     postVote = (id, option) => {
-        return fetch(`${api}/posts/${id}`, {
+        return fetch(`${apiUrl}/posts/${id}`, {
             method: 'POST',
             headers: {
                 ...headers,
@@ -129,7 +129,7 @@ class API {
      * @returns {Promise<Response | never>}
      */
     editPost = (id, post) => {
-        return fetch(`${api}/posts/${id}`, {
+        return fetch(`${apiUrl}/posts/${id}`, {
             method: 'PUT',
             headers: {
                 ...headers,
@@ -149,7 +149,7 @@ class API {
      * @returns {Promise<Response | never>}
      */
     deletePost = id => {
-        return fetch(`${api}/posts/${id}`, {
+        return fetch(`${apiUrl}/posts/${id}`, {
             method: 'DELETE',
             headers: {
                 ...headers,
@@ -167,7 +167,7 @@ class API {
      * @returns {Promise<Response | never>}
      */
     postComments = id => {
-        return fetch(`${api}/posts/${id}/comments`, {headers})
+        return fetch(`${apiUrl}/posts/${id}/comments`, {headers})
             .then(res => res.json())
             .then(data => {
                 return {
@@ -190,7 +190,7 @@ class API {
      * @returns {Promise<Response | never>}
      */
     addComment = comment => {
-        return fetch(`${api}/comments`, {
+        return fetch(`${apiUrl}/comments`, {
             method: 'POST',
             headers: {
                 ...headers,
@@ -214,7 +214,7 @@ class API {
      * @returns {Promise<Response | never>}
      */
     editComment = (id, comment) => {
-        return fetch(`${api}/comments/${id}`, {
+        return fetch(`${apiUrl}/comments/${id}`, {
             method: 'PUT',
             headers: {
                 ...headers,
@@ -232,7 +232,7 @@ class API {
      * @returns {Promise<Response | never>}
      */
     comment = id => {
-        return fetch(`${api}/comments/${id}`, {headers})
+        return fetch(`${apiUrl}/comments/${id}`, {headers})
             .then(res => res.json())
             .then(data => {
                 return {
@@ -249,7 +249,7 @@ class API {
      * @returns {Promise<Response | never>}
      */
     commentVote = (id, option) => {
-        return fetch(`${api}/comments/${id}`, {
+        return fetch(`${apiUrl}/comments/${id}`, {
             method: 'POST',
             headers: {
                 ...headers,
@@ -268,7 +268,7 @@ class API {
      * @returns {Promise<Response | never>}
      */
     deleteComment = id => {
-        return fetch(`${api}/comments/${id}`, {
+        return fetch(`${apiUrl}/comments/${id}`, {
             method: 'DELETE',
             headers: {
                 ...headers,
@@ -282,4 +282,4 @@ class API {
 
 }
 
-export default new API();
+export default new ReadableAPI();

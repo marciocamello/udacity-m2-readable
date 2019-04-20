@@ -21,6 +21,7 @@ Frontend
 │   └── index.html # DO NOT MODIFY
 └── src
     ├── App.js # This is the root of your app. Contains static HTML right now.
+    ├── readableAPI/ReadableAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
     ├── components # Helpful images for your app. Use at your discretion.
     │   ├── Loading.js # Custom loading to use in async requests
     ├── index.css # Global styles. You probably won't need to change anything here.
