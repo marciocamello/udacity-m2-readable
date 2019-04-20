@@ -1,22 +1,118 @@
-# Readable API Server
+# Readble Project
 
-This is the starter project for the final assessment project for Udacity's Redux course where you will build a content and comment web app. Users will be able to post content to predefined categories, comment on their posts and other users' posts, and vote on posts and comments. Users will also be able to edit and delete posts and comments.
+### UDACITY React Developer
 
-This repository includes the code for the backend API Server that you'll use to develop and interact with the front-end portion of the project.
+## Description
 
-## Start Developing
+## Features
 
-To get started developing right away:
+## Developer
 
-* Install and start the API server
-    - `cd api-server`
-    - `npm install`
-    - `node server`
-* In another terminal window, use Create React App to scaffold out the front-end
-    - `create-react-app frontend`
-    - `cd frontend`
-    - `npm start`
+### Structure
 
-## API Server
+```
+Frontend
+├── README.md - This file.
+├── cypress # Is a tool to test this application
+├── docs # Is a tool to generate docs using VuePressJS
+├── package.json # npm package manager file. It's unlikely that you'll need to modify this.
+├── public
+│   ├── favicon.ico # React Icon, You may change if you wish.
+│   └── index.html # DO NOT MODIFY
+└── src
+    ├── App.js # This is the root of your app. Contains static HTML right now.
+    ├── components # Helpful images for your app. Use at your discretion.
+    │   ├── Loading.js # Custom loading to use in async requests
+    ├── index.css # Global styles. You probably won't need to change anything here.
+    └── index.js # You should not need to modify this file. It is used for DOM rendering only.
+```
 
-Information about the API server and how to use it can be found in its [README file](api-server/README.md).
+## Instructions to Run Application
+
+### Install Dependencies
+
+```bash
+npm i or yarn
+```
+
+### Run application
+
+- Development
+
+```bash
+npm run start or yarn start
+```
+
+- Access to development Application
+
+```bash
+http://localhost:3000
+```
+
+- Production
+
+```bash
+npm run build or yarn build
+```
+
+This folder .build has generated, here contain your production files, and you can upload to your server.
+
+## Instructions to Run Tests
+
+```bash
+npm run cypress or yarn cypress
+```
+
+After open cypress tab, you can choice any test to run or run all tests to this application
+
+## Instructions to Generate Docs by VuePressJS
+
+- Development
+
+```bash
+npm run dev-docs or yarn dev-docs
+```
+
+- Access to development docs
+
+```bash
+http://localhost:8081
+```
+
+- Production
+
+```bash
+npm run build-docs or yarn build-docs
+```
+
+The docs files is generated in ./build/static/docs
+
+- Access to production Application
+
+```bash
+http://your_host/docs
+```
+
+- Deploy docs
+
+```bash
+
+# navigate into the build output directory
+cd ./build/static/docs
+
+git init
+git add -A
+git commit -m 'deploy'
+
+# if you are deploying to https://<USERNAME>.github.io
+# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
+
+# if you are deploying to https://<USERNAME>.github.io/<REPO>
+# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
+
+```
+
+- Docs to this repository in github pages
+
+https://marciocamello.github.io/udacity-m1-readable/
+
