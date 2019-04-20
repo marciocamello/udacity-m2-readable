@@ -1,15 +1,15 @@
 module.exports = {
     dest: './build/static/docs',
-    base: process.env.NODE_ENV === 'development' ? '/' : '/udacity-m1-my-reads/',
+    base: process.env.NODE_ENV === 'development' ? '/' : '/udacity-m2-readable/',
     locales: {
         '/': {
             lang: 'en-US',
-            title: 'My Reads',
+            title: 'Readable',
             description: 'A Shelf book area, to read your prefer books'
         },
         '/br/': {
             lang: 'pt-BR',
-            title: 'Minhas Leituras',
+            title: 'Leitura',
             description: 'Uma estante de livros, para ler seus livros preferidos'
         }
     },
