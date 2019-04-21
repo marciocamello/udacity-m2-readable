@@ -38,7 +38,7 @@ export default function postsReducer(state = {}, action) {
         case REMOVE_POST :
             return {
                 ...state,
-                ...action.payload
+                posts: state.posts.filter(post => post.id !== action.payload.id)
             };
         default :
             return state
