@@ -37,14 +37,10 @@ class App extends Component {
 function mapStateToProps({categoriesReducer, postsReducer}) {
 
     let posts = postsReducer.posts ? postsReducer.posts : [];
-    let newPost = postsReducer.newPost ? postsReducer.newPost : [];
 
     return {
         categories: categoriesReducer.categories ? categoriesReducer.categories : [],
-        posts: [
-            ...posts,
-            newPost
-        ]
+        posts: posts
     }
 }
 
