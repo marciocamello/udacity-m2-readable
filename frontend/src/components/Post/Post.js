@@ -5,7 +5,8 @@ import PostLink from "./PostLink";
 import {NavLink} from "react-router-dom";
 import CommentVote from "./PostVote";
 import CommentContainer from "../Comment/CommentContainer";
-import RemovePost from "./RemovePost";
+import RemovePostButton from "./RemovePostButton";
+import EditPostButton from "./EditPostButton";
 
 const Post = props => {
 
@@ -24,10 +25,15 @@ const Post = props => {
                                     </div>
                                 </div>
                                 <div className="col-2">
-                                    <RemovePost
-                                        postId={post.id}
-                                        onRemovePost={onRemovePost}
-                                    />
+                                    <div className="row">
+                                        <EditPostButton
+                                            postId={post.id}
+                                        />
+                                        <RemovePostButton
+                                            postId={post.id}
+                                            onRemovePost={onRemovePost}
+                                        />
+                                    </div>
                                 </div>
                             </div>
                             <p className={postId ? 'h1' : 'h3'}>{post.title}</p>

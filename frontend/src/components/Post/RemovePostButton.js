@@ -1,7 +1,7 @@
 import React from 'react';
 import Octicon, {Trashcan} from "@githubprimer/octicons-react";
 
-const RemovePost = props => {
+const RemovePostButton = props => {
 
     const {postId, onRemovePost} = props;
 
@@ -17,4 +17,4 @@ const RemovePost = props => {
     )
 };
 
-export default RemovePost;
+export default RemovePostButton;

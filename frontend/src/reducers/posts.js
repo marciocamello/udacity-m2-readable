@@ -1,4 +1,4 @@
-import { POSTS, SHOW_POST, POSTS_BY_DATE, POSTS_BY_VOTE_SCORE, POST_VOTE, ADD_POST, REMOVE_POST } from "../actions/posts";
+import { POSTS, SHOW_POST, POSTS_BY_DATE, POSTS_BY_VOTE_SCORE, POST_VOTE, ADD_POST, REMOVE_POST, EDIT_POST} from "../actions/posts";
 
 export default function postsReducer(state = {}, action) {
     switch (action.type) {
@@ -28,6 +28,14 @@ export default function postsReducer(state = {}, action) {
                 post: action.payload
             };
         case ADD_POST :
+            return {
+                ...state,
+                posts: [
+                    ...state.posts,
+                    action.payload
+                ]
+            };
+        case EDIT_POST :
             return {
                 ...state,
                 posts: [

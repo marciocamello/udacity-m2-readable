@@ -132,3 +132,21 @@ export const removePost = postId => {
         dispatch(hideLoading());
     }
 };
+
+export const EDIT_POST = 'EDIT_POST';
+
+export const receivePostEdit = (post) => {
+    return {
+        type: EDIT_POST,
+        payload: post
+    }
+};
+
+export const editPost = postId => {
+    return async (dispatch) => {
+        dispatch(showLoading());
+        /*const removePost = await API.deletePost(postId);
+        dispatch(receiveRemovePost(removePost));*/
+        dispatch(hideLoading());
+    }
+};

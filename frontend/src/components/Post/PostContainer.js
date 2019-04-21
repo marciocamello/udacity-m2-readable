@@ -1,6 +1,5 @@
 import React from 'react';
 import ListPosts from "./ListPosts";
-import RemovePost from "./RemovePost";
 
 const PostContainer = props => {
 

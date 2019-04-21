@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3c5a1ae-be9c-4ac3-af09-ed3b98dbd1dd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Post/RemovePost.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Post/RemovePost.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Post/EditPostButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/actions/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Post/EditPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Post/EditPost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Post/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Post/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Post/PostContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Post/PostContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Post/RemovePost.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Post/RemovePostButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/posts.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,7 +46,7 @@
           <entry key="css" value="6" />
           <entry key="env" value="3" />
           <entry key="html" value="5" />
-          <entry key="js" value="542" />
+          <entry key="js" value="558" />
           <entry key="json" value="11" />
           <entry key="md" value="12" />
           <entry key="ts" value="1" />
@@ -49,7 +57,7 @@
           <entry key="CSS" value="6" />
           <entry key="HTML" value="5" />
           <entry key="JSON" value="11" />
-          <entry key="JavaScript" value="542" />
+          <entry key="JavaScript" value="558" />
           <entry key="PLAIN_TEXT" value="15" />
           <entry key="TypeScript" value="1" />
         </counts>
@@ -58,7 +66,7 @@
         <counts>
           <entry key="css" value="24" />
           <entry key="html" value="7" />
-          <entry key="js" value="14411" />
+          <entry key="js" value="14620" />
           <entry key="json" value="39" />
           <entry key="md" value="189" />
         </counts>
@@ -68,7 +76,7 @@
           <entry key="CSS" value="24" />
           <entry key="HTML" value="7" />
           <entry key="JSON" value="39" />
-          <entry key="JavaScript" value="14411" />
+          <entry key="JavaScript" value="14620" />
           <entry key="PLAIN_TEXT" value="189" />
         </counts>
       </usages-collector>
@@ -76,13 +84,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/Post/RemovePost.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+            <state relative-caret-position="292">
+              <caret line="31" column="74" selection-start-line="31" selection-start-column="74" selection-end-line="31" selection-end-column="74" />
+              <folding>
+                <element signature="e#0#49#0" expanded="true" />
+                <element signature="e#261#328#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/actions/posts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="622">
+              <caret line="139" column="23" selection-start-line="139" selection-start-column="23" selection-end-line="139" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/reducers/posts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/Post/Post.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="34" lean-forward="true" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/Post/RemovePostButton.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/Post/PostContainer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="39" lean-forward="true" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/Post/EditPostButton.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/Post/EditPost.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -124,12 +211,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/api-server/comments.js" />
-        <option value="$PROJECT_DIR$/api-server/posts.js" />
         <option value="$PROJECT_DIR$/api-server/server.js" />
         <option value="$PROJECT_DIR$/frontend/src/API.js" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/frontend/src/components/Post/EditPost.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/Comment/CommentVode.js" />
         <option value="$PROJECT_DIR$/frontend/package.json" />
         <option value="$PROJECT_DIR$/frontend/.env" />
@@ -166,15 +250,18 @@
         <option value="$PROJECT_DIR$/frontend/src/components/Post/AddPost.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/Category/ListCategories.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/Comment/ListComments.js" />
-        <option value="$PROJECT_DIR$/frontend/src/components/Post/Post.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/Post/ViewPost.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/Pages/Home.js" />
-        <option value="$PROJECT_DIR$/frontend/src/components/Post/PostContainer.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/Post/ListPosts.js" />
-        <option value="$PROJECT_DIR$/frontend/src/components/App.js" />
-        <option value="$PROJECT_DIR$/frontend/src/reducers/posts.js" />
-        <option value="$PROJECT_DIR$/frontend/src/actions/posts.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/Post/RemovePost.js" />
+        <option value="$PROJECT_DIR$/frontend/src/components/Post/PostContainer.js" />
+        <option value="$PROJECT_DIR$/frontend/src/components/Post/RemovePostButton.js" />
+        <option value="$PROJECT_DIR$/frontend/src/components/Post/Post.js" />
+        <option value="$PROJECT_DIR$/frontend/src/components/Post/EditPostButton.js" />
+        <option value="$PROJECT_DIR$/frontend/src/actions/posts.js" />
+        <option value="$PROJECT_DIR$/frontend/src/reducers/posts.js" />
+        <option value="$PROJECT_DIR$/frontend/src/components/App.js" />
+        <option value="$PROJECT_DIR$/frontend/src/components/Post/EditPost.js" />
       </list>
     </option>
   </component>
@@ -319,10 +406,10 @@
       <recent name="$PROJECT_DIR$/frontend/src/api" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/src/components/Post" />
       <recent name="$PROJECT_DIR$/frontend/src/components/Comment" />
       <recent name="$PROJECT_DIR$/frontend/src/reducers" />
       <recent name="$PROJECT_DIR$/frontend/src/actions" />
-      <recent name="$PROJECT_DIR$/frontend/src/components/Post" />
       <recent name="$PROJECT_DIR$/frontend/src/middleware" />
     </key>
   </component>
@@ -352,12 +439,12 @@
       <workItem from="1555771339845" duration="911000" />
       <workItem from="1555773087527" duration="14533000" />
       <workItem from="1555807711186" duration="11649000" />
-      <workItem from="1555847146936" duration="35485000" />
+      <workItem from="1555847146936" duration="36642000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63185000" />
+    <option name="totallyTimeSpent" value="64342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1014" extended-state="6" />
@@ -375,7 +462,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32918552" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32918552" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -393,16 +480,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="113" selection-start-line="113" selection-end-line="113" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Post/EditPost.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -648,16 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Post/PostForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/Category/CategoryContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -718,42 +785,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Post/AddPost.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="9" column="41" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Post/ViewPost.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/Pages/Home.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Post/PostContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -768,31 +805,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Post/Post.js">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Post/ViewPost.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="435">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/App.js">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Post/AddPost.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="180">
+          <caret line="12" column="39" lean-forward="true" selection-end-line="35" selection-end-column="35" />
           <folding>
-            <element signature="e#0#49#0" expanded="true" />
-            <element signature="e#261#328#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/actions/posts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="118" lean-forward="true" selection-start-line="118" selection-end-line="118" />
+        <state relative-caret-position="622">
+          <caret line="139" column="23" selection-start-line="139" selection-start-column="23" selection-end-line="139" selection-end-column="23" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
@@ -801,17 +837,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/reducers/posts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+        <state relative-caret-position="480">
+          <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Post/RemovePost.js">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Post/Post.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        <state relative-caret-position="45">
+          <caret line="3" column="34" lean-forward="true" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Post/RemovePostButton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Post/PostContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="39" lean-forward="true" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Post/EditPostButton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="31" column="74" selection-start-line="31" selection-start-column="74" selection-end-line="31" selection-end-column="74" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+            <element signature="e#261#328#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Post/PostForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Post/EditPost.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -9,7 +9,8 @@ import HeaderContainer from '../components/Header/HeaderContainer';
 import ViewPost from "./Post/ViewPost";
 import Home from "./Pages/Home";
 import AddPost from "./Post/AddPost";
-import {removePost, savePost} from "../actions/posts";
+import {editPost, removePost, savePost} from "../actions/posts";
+import EditPost from "./Post/EditPost";
 
 
 class App extends Component {
@@ -28,6 +29,7 @@ class App extends Component {
                     <Route path='/:category/posts' render={props => <Home {...props} handleRemovePost={this.props.removePost}/>}/>
                     <Route path='/posts/:postId' render={props => <ViewPost {...props} categories={this.props.categories}/>}/>
                     <Route path='/add-post' render={props => <AddPost {...props} categories={this.props.categories} handleSavePost={this.props.savePost}/>}/>
+                    <Route path='/edit-post/:postId' render={props => <EditPost {...props} categories={this.props.categories} handleEditPost={this.props.editPost}/>}/>
                 </Fragment>
             </Switch>
         )
@@ -51,6 +53,9 @@ const mapDispatchToProps = dispatch => {
         },
         savePost: (postForm) => {
             dispatch(savePost(postForm));
+        },
+        editPost: (postId, postForm) => {
+            dispatch(editPost(postId, postForm));
         },
         removePost: postId => {
             dispatch(removePost(postId));
