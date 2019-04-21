@@ -1,15 +1,15 @@
 import React from 'react';
-import Octicon, {Trashcan} from "@githubprimer/octicons-react";
 
 import FormatDate from '../../utils/FormatDate';
 import PostLink from "./PostLink";
 import {NavLink} from "react-router-dom";
 import CommentVote from "./PostVote";
 import CommentContainer from "../Comment/CommentContainer";
+import RemovePost from "./RemovePost";
 
 const Post = props => {
 
-    const {post, postId, onPostVote, onCommentVote, commentsPosts} = props;
+    const {post, postId, onPostVote, onCommentVote, commentsPosts, onRemovePost} = props;
 
     return (
         <React.Fragment>
@@ -24,9 +24,10 @@ const Post = props => {
                                     </div>
                                 </div>
                                 <div className="col-2">
-                                    <button className="btn btn-sm btn-outline-danger float-right">
-                                        <Octicon icon={Trashcan}/> Remove
-                                    </button>
+                                    <RemovePost
+                                        postId={post.id}
+                                        onRemovePost={onRemovePost}
+                                    />
                                 </div>
                             </div>
                             <p className={postId ? 'h1' : 'h3'}>{post.title}</p>

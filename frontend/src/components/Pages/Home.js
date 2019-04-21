@@ -3,7 +3,7 @@ import CategoryContainer from "../Category/CategoryContainer";
 import BannerContainer from "../Banner/BannerContainer";
 import PostContainer from "../Post/PostContainer";
 import connect from "react-redux/es/connect/connect";
-import {filterPosts, savePostVote} from "../../actions/posts";
+import {filterPosts, savePostVote, removePost} from "../../actions/posts";
 
 class Home extends Component {
 
@@ -14,7 +14,7 @@ class Home extends Component {
 
     render() {
 
-        const {posts, categories, postVote} = this.props;
+        const {posts, categories, postVote, handleRemovePost} = this.props;
 
         return (
             <main role="main" className="flex-shrink-0">
@@ -29,6 +29,7 @@ class Home extends Component {
                     <PostContainer
                         posts={posts}
                         onPostVote={postVote}
+                        onRemovePost={handleRemovePost}
                     />
                 </div>
             </main>

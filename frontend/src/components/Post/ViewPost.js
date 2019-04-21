@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {getPost, savePostVote} from "../../actions/posts";
+import {getPost, removePost, savePostVote} from "../../actions/posts";
 import connect from "react-redux/es/connect/connect";
 import Post from "./Post";
 import {getCommentsByPost, saveCommentVote} from "../../actions/comments";
@@ -14,7 +14,7 @@ class ViewPost extends Component {
     }
 
     render() {
-        const {categories, filterPosts, post, postId, postVote, commentVote, commentsPosts} = this.props;
+        const {categories, filterPosts, post, postId, postVote, commentVote, commentsPosts, removePost} = this.props;
         return (
             <div className='container'>
                 <CategoryContainer
@@ -27,6 +27,7 @@ class ViewPost extends Component {
                     onPostVote={postVote}
                     commentsPosts={commentsPosts}
                     onCommentVote={commentVote}
+                    onRemovePost={removePost}
                 />
             </div>
         )
@@ -63,6 +64,9 @@ const mapDispatchToProps = dispatch => {
         },
         postComments: postId => {
             dispatch(getCommentsByPost(postId));
+        },
+        removePost: postId => {
+            dispatch(removePost(postId));
         }
     };
 };

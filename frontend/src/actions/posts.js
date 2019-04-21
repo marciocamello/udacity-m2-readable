@@ -114,3 +114,21 @@ export const savePost = postData => {
         dispatch(hideLoading());
     }
 };
+
+export const REMOVE_POST = 'REMOVE_POST';
+
+export const receiveRemovePost = (post) => {
+    return {
+        type: REMOVE_POST,
+        payload: post
+    }
+};
+
+export const removePost = postId => {
+    return async (dispatch) => {
+        dispatch(showLoading());
+        /*const newPost = await API.addPost(postData);
+        dispatch(receivePostAdd(newPost));*/
+        dispatch(hideLoading());
+    }
+};
