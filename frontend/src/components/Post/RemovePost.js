@@ -6,7 +6,12 @@ const RemovePost = props => {
     const {postId, onRemovePost} = props;
 
     return (
-        <button className="btn btn-sm btn-outline-danger float-right" onClick={() => onRemovePost(postId)}>
+        <button className="btn btn-sm btn-outline-danger float-right" onClick={() => {
+            if (window.confirm('You are sure?')) {
+                onRemovePost(postId);
+                return true;
+            }
+        }}>
             <Octicon icon={Trashcan}/> Remove
         </button>
     )
