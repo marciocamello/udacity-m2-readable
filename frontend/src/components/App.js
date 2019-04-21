@@ -1,64 +1,63 @@
 import React, {Component, Fragment} from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
-import PropTypes from 'prop-types';
-import API from '../api/ReadableAPI';
+import {Switch, Route, withRouter} from 'react-router-dom';
+import {connect} from 'react-redux';
+import {handleInitialData} from "../actions/shared";
+import LoadingBar from 'react-redux-loading';
 
 // components
 import HeaderContainer from '../components/Header/HeaderContainer';
 import ViewPost from "./Post/ViewPost";
 import Home from "./Pages/Home";
+import AddPost from "./Post/AddPost";
+import {savePost} from "../actions/posts";
+
 
 class App extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            categories: [],
-            posts: [],
-            comments: []
-        };
-    }
-
     componentDidMount() {
-        this.fetchCategories();
-        this.fetchPosts();
-    }
-    async fetchCategories() {
-        const categories = await API.categories();
-        this.setState(categories);
-    }
-
-    async fetchPosts() {
-        const posts = await API.posts();
-        this.setState(posts);
+        this.props.fetchInitialData();
     }
 
     render() {
-        const {categories, posts} = this.state;
         return (
-            <Router>
+            <Switch>
                 <Fragment>
+                    <LoadingBar />
                     <HeaderContainer/>
-                    <Route path='/' exact render={(props) => <Home
-                        {...props}
-                        categories={categories}
-                        posts={posts}
-                    />}/>
-                    <Route path='/:id/posts' exact render={(props) => <Home
-                        {...props}
-                        categories={categories}
-                        posts={posts}
-                    />}/>
-                    <Route path='/posts/:id' component={ViewPost}/>
+                    <Route exact path='/' component={Home}/>
+                    <Route path='/:category/posts' component={Home}/>
+                    <Route path='/posts/:postId' render={props => <ViewPost {...props} categories={this.props.categories}/>}/>
+                    <Route path='/add-post' render={props => <AddPost {...props} categories={this.props.categories} handleSavePost={this.props.savePost}/>}/>
                 </Fragment>
-            </Router>
+            </Switch>
         )
     }
 }
 
-App.propTypes = {
-    //classes: PropTypes.object.isRequired
+function mapStateToProps({categoriesReducer, postsReducer}) {
+
+    let posts = postsReducer.posts ? postsReducer.posts : [];
+    let newPost = postsReducer.newPost ? postsReducer.newPost : [];
+
+    return {
+        categories: categoriesReducer.categories ? categoriesReducer.categories : [],
+        posts: [
+            ...posts,
+            newPost
+        ]
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchInitialData: () => {
+            dispatch(handleInitialData());
+        },
+        savePost: (postForm) => {
+            dispatch(savePost(postForm));
+        }
+    };
 };
 
-export default App;
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
 

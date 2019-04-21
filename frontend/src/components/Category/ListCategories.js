@@ -1,23 +1,50 @@
 import React from 'react';
 import Category from "./Category";
+import {NavLink} from "react-router-dom";
 
 const ListCategories = props => {
 
-    const {categories} = props;
+    const {categories, filterPosts} = props;
 
     return (
-        <React.Fragment>
-            <div className="inner">
-                <nav className="nav nav-masthead justify-content-center">
-                    {categories.map(category => (
-                        <Category
-                            key={category.name}
-                            category={category}
-                        />
-                    ))}
-                </nav>
+        <div className="inner">
+            <div className="row">
+                <div className="col-6">
+                    <nav className="nav nav-masthead justify-content-left">
+                        <li className="nav-item">
+                            <NavLink to="/" exact activeClassName='active' className="nav-link">
+                                All
+                            </NavLink>
+                        </li>
+                        {categories.length > 0 && categories.map(category => (
+                            <Category
+                                key={category.name}
+                                category={category}
+                            />
+                        ))}
+                    </nav>
+                </div>
+                <div className={filterPosts ? 'col-3' : 'col-6'}>
+                    <nav className="nav nav-masthead justify-content-end">
+                        <li className="nav-item">
+                            <NavLink to="/add-post" exact activeClassName='active' className="nav-link text-uppercase">
+                                Create New Post
+                            </NavLink>
+                        </li>
+                    </nav>
+                </div>
+                {filterPosts && (<div className="col-3">
+                        <nav className="nav nav-masthead justify-content-end">
+                            <select className="form-control" onChange={(e) => filterPosts(e)}>
+                                <option value="">All</option>
+                                <option value="Date">Order By Date</option>
+                                {/*<option value="VoteScore">Order By VoteScore</option>*/}
+                            </select>
+                        </nav>
+                    </div>
+                )}
             </div>
-        </React.Fragment>
+        </div>
     )
 };
 

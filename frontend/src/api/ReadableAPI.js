@@ -4,7 +4,10 @@ const apiUrl = "http://localhost:3001";
 // Generate a unique token for storing your bookshelf data on the backend server.
 let token = localStorage.token;
 if (!token)
-    token = localStorage.token = Math.random().toString(36).substr(-8);
+    token = localStorage.token = Math
+        .random()
+        .toString(36)
+        .substr(-8);
 
 const headers = {
     'Accept': 'application/json',
@@ -48,11 +51,7 @@ class ReadableAPI {
     posts = () => {
         return fetch(`${apiUrl}/posts`, {headers})
             .then(res => res.json())
-            .then(data => {
-                return {
-                    posts: data
-                }
-            });
+            .then(data => data);
     };
 
     /**
@@ -76,7 +75,7 @@ class ReadableAPI {
                 ...headers,
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({post})
+            body: JSON.stringify(post)
         })
             .then(res => res.json())
             .then(data => data);
@@ -135,7 +134,7 @@ class ReadableAPI {
                 ...headers,
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({post})
+            body: JSON.stringify(post)
         })
             .then(res => res.json())
             .then(data => data);
@@ -196,7 +195,7 @@ class ReadableAPI {
                 ...headers,
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({comment})
+            body: JSON.stringify(comment)
         })
             .then(res => res.json())
             .then(data => data);
@@ -220,11 +219,12 @@ class ReadableAPI {
                 ...headers,
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({comment})
+            body: JSON.stringify(comment)
         })
             .then(res => res.json())
             .then(data => data);
     };
+
     /**
      * Get the details for a single comment.
      * @GET
