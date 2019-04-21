@@ -1,4 +1,5 @@
 import React from 'react';
+import Octicon, {Trashcan} from "@githubprimer/octicons-react";
 
 import FormatDate from '../../utils/FormatDate';
 import PostLink from "./PostLink";
@@ -16,7 +17,18 @@ const Post = props => {
                 <div className="container">
                     <div className="card mb-4 shadow-sm">
                         <div className="card-body">
-                            <p className='text-muted text-uppercase'>{post.category}</p>
+                            <div className="row">
+                                <div className="col-10">
+                                    <div className="justify-content-left">
+                                        <p className='text-muted text-uppercase'>{post.category}</p>
+                                    </div>
+                                </div>
+                                <div className="col-2">
+                                    <button className="btn btn-sm btn-outline-danger float-right">
+                                        <Octicon icon={Trashcan}/> Remove
+                                    </button>
+                                </div>
+                            </div>
                             <p className={postId ? 'h1' : 'h3'}>{post.title}</p>
                             <blockquote className="blockquote">
                                 {postId && (

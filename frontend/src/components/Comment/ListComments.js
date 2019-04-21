@@ -7,15 +7,17 @@ const ListComments = props => {
 
     return (
         <React.Fragment>
-            <h1>Comments</h1>
             {commentsPosts && commentsPosts.length > 0 && (
-                commentsPosts.map(comment => (
-                    <Comment
-                        key={comment.id}
-                        comment={comment}
-                        onCommentVote={onCommentVote}
-                    />
-                ))
+                <div>
+                    <h1>Comments</h1>
+                    {commentsPosts.map(comment => (
+                        <Comment
+                            key={comment.id}
+                            comment={comment}
+                            onCommentVote={onCommentVote}
+                        />
+                    ))}
+                </div>
             )}
         </React.Fragment>
     )
