@@ -31,6 +31,7 @@ export default function postsReducer(state = {}, action) {
             return {
                 ...state,
                 posts: [
+                    ...state.posts,
                     action.payload
                 ]
             };

@@ -127,8 +127,8 @@ export const receiveRemovePost = (post) => {
 export const removePost = postId => {
     return async (dispatch) => {
         dispatch(showLoading());
-        /*const newPost = await API.addPost(postData);
-        dispatch(receivePostAdd(newPost));*/
+        const removePost = await API.deletePost(postId);
+        dispatch(receiveRemovePost(removePost));
         dispatch(hideLoading());
     }
 };
