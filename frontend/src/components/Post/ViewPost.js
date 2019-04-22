@@ -14,7 +14,7 @@ class ViewPost extends Component {
     }
 
     render() {
-        const {categories, filterPosts, post, postId, postVote, commentVote, commentsPosts, removePost} = this.props;
+        const {categories, filterPosts, post, postId, postVote, commentVote, commentsPosts, removePost, handleRemoveComment} = this.props;
         return (
             <div className='container'>
                 <CategoryContainer
@@ -28,6 +28,7 @@ class ViewPost extends Component {
                     commentsPosts={commentsPosts}
                     onCommentVote={commentVote}
                     onRemovePost={removePost}
+                    onRemoveComment={handleRemoveComment}
                 />
             </div>
         )

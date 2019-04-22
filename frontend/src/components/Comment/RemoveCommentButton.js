@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Octicon, {Trashcan} from "@githubprimer/octicons-react";
-import {Redirect,withRouter} from "react-router-dom";
+import {Redirect, withRouter} from "react-router-dom";
 
-class RemovePostButton extends Component{
+class RemoveCommentButton extends Component{
 
     constructor (props) {
         super(props);
@@ -13,25 +13,25 @@ class RemovePostButton extends Component{
 
     render () {
 
-        const {postId, onRemovePost} = this.props;
+        const {post, commentId, onRemoveComment} = this.props;
 
         return (
             <div>
                 <button className="btn btn-sm btn-outline-danger float-right" onClick={() => {
                     if (window.confirm('You are sure?')) {
-                        onRemovePost(postId);
+                        onRemoveComment(commentId);
                         this.setState({redirect: true});
                         return true;
                     }
                 }}>
                     <Octicon icon={Trashcan}/> Remove
                 </button>
-                {this.state.redirect && (
-                    <Redirect exact to={`/posts/${postId}`}/>
+                {this.state.redirect && this.props.match.path === '/posts/:postId' && (
+                    <Redirect exact to={'/'}/>
                 )}
             </div>
         )
     }
 }
 
-export default withRouter(RemovePostButton);
+export default withRouter(RemoveCommentButton);

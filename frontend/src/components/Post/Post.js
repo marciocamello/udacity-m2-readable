@@ -10,7 +10,7 @@ import EditPostButton from "./EditPostButton";
 
 const Post = props => {
 
-    const {post, postId, onPostVote, onCommentVote, commentsPosts, onRemovePost} = props;
+    const {post, postId, onPostVote, onCommentVote, commentsPosts, onRemovePost, onRemoveComment} = props;
 
     return (
         <React.Fragment>
@@ -70,6 +70,7 @@ const Post = props => {
                         <CommentContainer
                             commentsPosts={commentsPosts}
                             onCommentVote={onCommentVote}
+                            onRemoveComment={onRemoveComment}
                             postId={postId}
                         />
                     )}

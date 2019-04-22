@@ -1,4 +1,4 @@
-import { POST_COMMENTS, COMMENT_VOTE } from "../actions/comments";
+import {POST_COMMENTS, COMMENT_VOTE, REMOVE_COMMENT} from "../actions/comments";
 
 export default function (state = {}, action) {
     switch (action.type) {
@@ -11,6 +11,11 @@ export default function (state = {}, action) {
             return {
                 ...state,
                 comment: action.payload
+            };
+        case REMOVE_COMMENT :
+            return {
+                ...state,
+                postComments: state.postComments.filter(comment => comment.id !== action.payload.id)
             };
         default :
             return state

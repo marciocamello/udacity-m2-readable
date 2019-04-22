@@ -1,17 +1,36 @@
 import React from 'react';
 import FormatDate from "../../utils/FormatDate";
 import CommentVote from "./CommentVote";
+import EditPostButton from "../Post/EditPostButton";
+import RemoveCommentButton from "./RemoveCommentButton";
 
 const Comment = props => {
 
-    const {comment, onCommentVote} = props;
+    const {comment, onCommentVote, onRemoveComment} = props;
 
     return (
         <React.Fragment>
             {comment && (
                 <div className="card mb-2 shadow-sm">
                     <div className="card-body">
-                        <p className='h3'>{comment.title}</p>
+                        <div className="row">
+                            <div className="col-10">
+                                <div className="justify-content-left">
+                                    <p className='h3'>{comment.title}</p>
+                                </div>
+                            </div>
+                            <div className="col-2">
+                                <div className="row">
+                                    <EditPostButton
+                                        commentId={comment.id}
+                                    />
+                                    <RemoveCommentButton
+                                        commentId={comment.id}
+                                        onRemoveComment={onRemoveComment}
+                                    />
+                                </div>
+                            </div>
+                        </div>
                         <blockquote className="blockquote">
                             <p className="mb-0 d-inline-block text-truncate">{comment.body}</p>
                             <footer className="blockquote-footer">{comment.author}</footer>

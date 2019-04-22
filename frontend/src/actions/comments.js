@@ -36,3 +36,21 @@ export const saveCommentVote = (commentId, option) => {
         dispatch(hideLoading());
     }
 };
+
+export const REMOVE_COMMENT = 'REMOVE_COMMENT';
+
+export const receiveRemoveComment = (comment) => {
+    return {
+        type: REMOVE_COMMENT,
+        payload: comment
+    }
+};
+
+export const removeComment = commentId => {
+    return async (dispatch) => {
+        dispatch(showLoading());
+        const removeComment = await API.deleteComment(commentId);
+        dispatch(receiveRemoveComment(removeComment));
+        dispatch(hideLoading());
+    }
+};

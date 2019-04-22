@@ -10,6 +10,7 @@ import ViewPost from "./Post/ViewPost";
 import Home from "./Pages/Home";
 import AddPost from "./Post/AddPost";
 import {editPost, removePost, savePost} from "../actions/posts";
+import {removeComment} from "../actions/comments";
 import EditPost from "./Post/EditPost";
 
 
@@ -25,11 +26,30 @@ class App extends Component {
                 <Fragment>
                     <LoadingBar />
                     <HeaderContainer/>
-                    <Route exact path='/' render={props => <Home {...props} handleRemovePost={this.props.removePost}/>}/>
-                    <Route path='/:category/posts' render={props => <Home {...props} handleRemovePost={this.props.removePost}/>}/>
-                    <Route path='/posts/:postId' render={props => <ViewPost {...props} categories={this.props.categories}/>}/>
-                    <Route path='/add-post' render={props => <AddPost {...props} categories={this.props.categories} handleSavePost={this.props.savePost}/>}/>
-                    <Route path='/edit-post/:postId' render={props => <EditPost {...props} posts={this.props.posts} categories={this.props.categories} handleEditPost={this.props.editPost}/>}/>
+                    <Route exact path='/' render={props => <Home
+                        {...props}
+                        handleRemovePost={this.props.removePost}
+                    />}/>
+                    <Route path='/:category/posts' render={props => <Home
+                        {...props}
+                        handleRemovePost={this.props.removePost}
+                    />}/>
+                    <Route path='/posts/:postId' render={props => <ViewPost
+                        {...props}
+                        categories={this.props.categories}
+                        handleRemoveComment={this.props.removeComment}
+                    />}/>
+                    <Route path='/add-post' render={props => <AddPost
+                        {...props}
+                        categories={this.props.categories}
+                        handleSavePost={this.props.savePost}
+                    />}/>
+                    <Route path='/edit-post/:postId' render={props => <EditPost
+                        {...props}
+                        posts={this.props.posts}
+                        categories={this.props.categories}
+                        handleEditPost={this.props.editPost}
+                    />}/>
                 </Fragment>
             </Switch>
         )
@@ -59,6 +79,9 @@ const mapDispatchToProps = dispatch => {
         },
         removePost: postId => {
             dispatch(removePost(postId));
+        },
+        removeComment: commentId => {
+            dispatch(removeComment(commentId));
         }
     };
 };
