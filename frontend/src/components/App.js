@@ -29,7 +29,7 @@ class App extends Component {
                     <Route path='/:category/posts' render={props => <Home {...props} handleRemovePost={this.props.removePost}/>}/>
                     <Route path='/posts/:postId' render={props => <ViewPost {...props} categories={this.props.categories}/>}/>
                     <Route path='/add-post' render={props => <AddPost {...props} categories={this.props.categories} handleSavePost={this.props.savePost}/>}/>
-                    <Route path='/edit-post/:postId' render={props => <EditPost {...props} categories={this.props.categories} handleEditPost={this.props.editPost}/>}/>
+                    <Route path='/edit-post/:postId' render={props => <EditPost {...props} posts={this.props.posts} categories={this.props.categories} handleEditPost={this.props.editPost}/>}/>
                 </Fragment>
             </Switch>
         )

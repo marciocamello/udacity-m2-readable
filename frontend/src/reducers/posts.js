@@ -36,10 +36,11 @@ export default function postsReducer(state = {}, action) {
                 ]
             };
         case EDIT_POST :
+            const posts = state.posts.filter(post => post.id !== action.postId);
             return {
                 ...state,
                 posts: [
-                    ...state.posts,
+                    ...posts,
                     action.payload
                 ]
             };

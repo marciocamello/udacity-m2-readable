@@ -1,43 +1,52 @@
 import React, {Component} from 'react';
 import {NavLink} from "react-router-dom";
 import generateUID from "../../utils/GenerateUUID";
-import { Redirect } from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 
 class PostForm extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            redirect: false
-        }
+            redirect: false,
+        };
     }
 
-    handleOnSavePost(e, onSavePost) {
+    handleOnSavePost(e) {
 
         e.preventDefault();
+
         const postData = {
-            id: generateUID(),
             title: e.target.title.value,
-            body: e.target.body.value,
-            author: e.target.author.value,
-            category: e.target.category.value,
-            timestamp: new Date().getTime(),
+            body: e.target.body.value
         };
 
-        onSavePost(postData);
-        this.setState({ redirect: true });
+        if (this.props.post) {
+
+            this.props.onEditPost(this.props.postId, postData);
+
+        } else {
+            postData.id = generateUID();
+            postData.author = e.target.author.value;
+            postData.category = e.target.category.value;
+            postData.timestamp = new Date().getTime();
+            this.props.onSavePost(postData);
+        }
+
+        this.setState({redirect: true});
     }
 
     render() {
 
-        const {categories, onSavePost} = this.props;
-        const { redirect } = this.state;
+        const {post, categories} = this.props;
+        const {redirect} = this.state;
 
         return (
-            <form onSubmit={e => this.handleOnSavePost(e, onSavePost)}>
+            <form onSubmit={e => this.handleOnSavePost(e)}>
                 <div className="form-group">
                     <label htmlFor="category" className='label-control'>Category</label>
-                    <select name="category" className='form-control' ref={this.category} required>
+                    <select name="category" defaultValue={post ? post.category : ''} className='form-control'
+                            ref={this.category} required>
                         {categories && categories.length > 0 && (
                             categories.map(category => (
                                 <option
@@ -50,21 +59,28 @@ class PostForm extends Component {
                 </div>
                 <div className="form-group">
                     <label htmlFor="title" className='label-control'>Title</label>
-                    <input type="text" name="title" className='form-control' ref={this.title} required/>
+                    <input type="text" defaultValue={post ? post.title : ''} name="title" className='form-control'
+                           ref={this.title} required/>
                 </div>
                 <div className="form-group">
                     <label htmlFor="body" className='label-control'>Body</label>
-                    <textarea name="body" className='form-control' ref={this.body} required>
-
-                </textarea>
+                    <input
+                        type="text"
+                        name="body"
+                        className='form-control'
+                        defaultValue={post ? post.body : ''}
+                        ref={this.body}
+                        required
+                    />
                 </div>
                 <div className="form-group">
                     <label htmlFor="author" className='label-control'>Author</label>
-                    <input type="text" name="author" className='form-control' ref={this.author} required/>
+                    <input type="text" defaultValue={post ? post.author : ''} name="author" className='form-control'
+                           ref={this.author} required/>
                 </div>
                 <div className="form-group">
-                    <button className='btn btn-info mr-2' type="submit">
-                        Save
+                    <button className={post ? 'btn btn-info mr-2' : 'btn btn-success mr-2'} type="submit">
+                        {post ? 'Update' : 'Save'}
                     </button>
                     <
                         NavLink to='/' exact>

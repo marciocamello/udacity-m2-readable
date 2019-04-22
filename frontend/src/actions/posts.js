@@ -135,18 +135,19 @@ export const removePost = postId => {
 
 export const EDIT_POST = 'EDIT_POST';
 
-export const receivePostEdit = (post) => {
+export const receivePostEdit = (postId, updatePost) => {
     return {
         type: EDIT_POST,
-        payload: post
+        payload: updatePost,
+        postId
     }
 };
 
-export const editPost = postId => {
+export const editPost = (postId, postData) => {
     return async (dispatch) => {
         dispatch(showLoading());
-        /*const removePost = await API.deletePost(postId);
-        dispatch(receiveRemovePost(removePost));*/
+        const updatePost = await API.editPost(postId, postData);
+        dispatch(receivePostEdit(postId, updatePost));
         dispatch(hideLoading());
     }
 };

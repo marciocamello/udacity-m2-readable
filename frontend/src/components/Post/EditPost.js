@@ -7,7 +7,9 @@ class EditPost extends Component{
 
     render () {
 
-        const {postId, categories, handleEditPost} = this.props;
+        const {posts, categories, handleSavePost, handleEditPost} = this.props;
+        const {postId} = this.props.match.params;
+        const post = posts.find(p => p.id === postId);
 
         return (
             <div className="container">
@@ -15,17 +17,15 @@ class EditPost extends Component{
                     categories={categories}
                     filterPosts={false}
                 />
-                <h1>Create New Post</h1>
+                <h1>{postId ? 'Update Post' : 'Create New Post'}</h1>
                 <div className="card mb-4 shadow-sm">
                     <div className="card-body">
                         <PostForm
                             postId={postId}
+                            post={post}
+                            onSavePost={handleSavePost}
                             onEditPost={handleEditPost}
                             categories={categories}
-                            title={this.title}
-                            body={this.body}
-                            author={this.author}
-                            category={this.category}
                         />
                     </div>
                 </div>
