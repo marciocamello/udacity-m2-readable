@@ -28,6 +28,7 @@ const Post = props => {
                                     <div className="row">
                                         <EditPostButton
                                             postId={post.id}
+                                            postCategory={post.category}
                                         />
                                         <RemovePostButton
                                             postId={post.id}
@@ -45,7 +46,7 @@ const Post = props => {
                             </blockquote>
                             <div className="d-flex justify-content-between align-items-center">
                                 {!postId ? (
-                                    <PostLink postId={post.id}/>
+                                    <PostLink postId={post.id} postCategory={post.category}/>
                                 ) : (
                                     <NavLink to='/' exact>
                                         <button type="button" className="btn btn-sm btn-outline-info">Back</button>
@@ -72,6 +73,7 @@ const Post = props => {
                             onCommentVote={onCommentVote}
                             onRemoveComment={onRemoveComment}
                             postId={postId}
+                            categoryId={post.category}
                         />
                     )}
                 </div>

@@ -3,9 +3,9 @@ import PostForm from "./PostForm";
 import {withRouter} from "react-router-dom";
 import CategoryContainer from "../Category/CategoryContainer";
 
-class AddPost extends Component{
+class AddPost extends Component {
 
-    render () {
+    render() {
 
         const {categories, handleSavePost} = this.props;
 

@@ -30,21 +30,21 @@ class App extends Component {
                         {...props}
                         handleRemovePost={this.props.removePost}
                     />}/>
-                    <Route path='/:category/posts' render={props => <Home
+                    <Route exact path='/:category' render={props => <Home
                         {...props}
                         handleRemovePost={this.props.removePost}
                     />}/>
-                    <Route path='/posts/:postId' render={props => <ViewPost
+                    <Route exact path='/:category/:postId' render={props => <ViewPost
                         {...props}
                         categories={this.props.categories}
                         handleRemoveComment={this.props.removeComment}
                     />}/>
-                    <Route path='/add-post' render={props => <AddPost
+                    <Route exact path='/add-post' render={props => <AddPost
                         {...props}
                         categories={this.props.categories}
                         handleSavePost={this.props.savePost}
                     />}/>
-                    <Route path='/edit-post/:postId' render={props => <EditPost
+                    <Route exact path='/:category/:postId/:edit' render={props => <EditPost
                         {...props}
                         posts={this.props.posts}
                         categories={this.props.categories}

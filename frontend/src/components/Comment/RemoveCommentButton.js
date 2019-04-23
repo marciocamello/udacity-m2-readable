@@ -6,14 +6,11 @@ class RemoveCommentButton extends Component{
 
     constructor (props) {
         super(props);
-        this.state = {
-            redirect: false
-        };
     }
 
     render () {
 
-        const {post, commentId, onRemoveComment} = this.props;
+        const {commentId, onRemoveComment} = this.props;
 
         return (
             <div>
@@ -26,9 +23,6 @@ class RemoveCommentButton extends Component{
                 }}>
                     <Octicon icon={Trashcan}/> Remove
                 </button>
-                {this.state.redirect && this.props.match.path === '/posts/:postId' && (
-                    <Redirect exact to={'/'}/>
-                )}
             </div>
         )
     }

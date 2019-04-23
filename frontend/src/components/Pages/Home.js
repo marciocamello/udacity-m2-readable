@@ -19,10 +19,12 @@ class Home extends Component {
         return (
             <main role="main" className="flex-shrink-0">
                 <div className="container">
-                    <CategoryContainer
-                        categories={categories}
-                        filterPosts={this.handleFilterPosts}
-                    />
+                    {this.props.match.params.category !== 'add-post' && (
+                        <CategoryContainer
+                            categories={categories}
+                            filterPosts={this.handleFilterPosts}
+                        />
+                    )}
                     <BannerContainer
                         posts={posts}
                     />
@@ -37,11 +39,12 @@ class Home extends Component {
     }
 }
 
-const mapStateToProps = ({categoriesReducer, postsReducer}, ownProps) => {
+const mapStateToProps = ({categoriesReducer, postsReducer, commentsReducer}, ownProps) => {
 
     const {category} = ownProps.match.params;
     let filteredPosts = postsReducer.posts ? postsReducer.posts : [];
     let post = postsReducer.post ? postsReducer.post : [];
+    let commentsPosts = commentsReducer.postComments ? commentsReducer.postComments : [];
 
     if (category) {
         filteredPosts = filteredPosts.filter(post => post.category === category);
@@ -52,6 +55,7 @@ const mapStateToProps = ({categoriesReducer, postsReducer}, ownProps) => {
         posts: filteredPosts.map(p => {
             if (post.id === p.id) {
                 p.voteScore = post.voteScore;
+                p.commentCount = commentsPosts.length;
             }
             return p;
         })

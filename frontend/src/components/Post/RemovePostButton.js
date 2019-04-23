@@ -26,8 +26,8 @@ class RemovePostButton extends Component{
                 }}>
                     <Octicon icon={Trashcan}/> Remove
                 </button>
-                {this.state.redirect && (
-                    <Redirect exact to={`/posts/${postId}`}/>
+                {this.state.redirect && this.props.match.path === '/:category/:postId' && (
+                    <Redirect exact to={`/`}/>
                 )}
             </div>
         )

@@ -4,10 +4,10 @@ import {NavLink} from "react-router-dom";
 
 const EditPostButton = props => {
 
-    const {postId} = props;
+    const {postId,postCategory} = props;
 
     return (
-        <NavLink to={`/edit-post/${postId}`}>
+        <NavLink to={`/${postCategory}/${postId}/edit`}>
             <button className="btn btn-sm btn-outline-success float-right mr-2">
                 <Octicon icon={Pencil}/> Edit
             </button>

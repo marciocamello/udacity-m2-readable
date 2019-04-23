@@ -37,11 +37,16 @@ class ViewPost extends Component {
 
 function mapStateToProps({postsReducer, commentsReducer}, ownProps) {
 
+    const post = postsReducer.post ? postsReducer.post : null;
     let commentsPosts = commentsReducer.postComments ? commentsReducer.postComments : [];
     let comment = commentsReducer.comment ? commentsReducer.comment : [];
 
+    if (post) {
+        post.commentCount = commentsPosts.length;
+    }
+
     return {
-        post: postsReducer.post ? postsReducer.post : null,
+        post,
         commentsPosts: commentsPosts.map(c => {
             if (comment.id === c.id) {
                 c.voteScore = comment.voteScore;
