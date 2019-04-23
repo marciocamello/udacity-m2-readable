@@ -21,14 +21,14 @@ class CommentForm extends Component {
             body: e.target.body.value
         };
 
-        if (this.props.post) {
+        if (this.props.comment) {
 
-            //this.props.onEditComment(this.props.commentId, commentData);
+            this.props.onEditComment(this.props.commentId, commentData);
 
         } else {
             commentData.id = generateUID();
             commentData.timestamp = new Date().getTime();
-            //this.props.onSaveComment(commentData);
+            this.props.onSaveComment(commentData);
         }
 
         this.setState({redirect: true});

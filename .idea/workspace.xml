@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3c5a1ae-be9c-4ac3-af09-ed3b98dbd1dd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Comment/AddComment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Comment/CommentForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Comment/EditComment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Comment/EditCommentButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/actions/comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/comments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/actions/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Category/CategoryContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Category/CategoryContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Category/ListCategories.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Category/ListCategories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Comment/Comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Comment/Comment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Comment/CommentContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Comment/CommentContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Comment/ListComments.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Comment/ListComments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Post/AddPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Post/AddPost.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Post/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Post/Post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Post/PostForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Post/PostForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/comments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Comment/CommentForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Comment/CommentForm.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -109,8 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/components/Comment/EditComment.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+            <state relative-caret-position="152">
+              <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -121,8 +105,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/src/components/Comment/CommentForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="50" column="39" lean-forward="true" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
+            <state relative-caret-position="30">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -133,8 +117,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/actions/comments.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+            <state relative-caret-position="482">
+              <caret line="86" column="24" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="24" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -430,18 +414,18 @@
       <workItem from="1555807711186" duration="11649000" />
       <workItem from="1555847146936" duration="43518000" />
       <workItem from="1555928221466" duration="2294000" />
-      <workItem from="1555972007725" duration="10822000" />
+      <workItem from="1555972007725" duration="10930000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84334000" />
+    <option name="totallyTimeSpent" value="84442000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1014" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23319103" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23319103" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -453,7 +437,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3280543" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3280543" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -870,16 +854,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/actions/comments.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
@@ -903,18 +877,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/Comment/EditComment.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+        <state relative-caret-position="152">
+          <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/actions/comments.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="86" column="24" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/Comment/CommentForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="50" column="39" lean-forward="true" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
+        <state relative-caret-position="30">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
