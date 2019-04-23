@@ -6,9 +6,6 @@ class CommentForm extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            redirect: false,
-        };
     }
 
     handleOnSaveComment(e) {
@@ -31,13 +28,12 @@ class CommentForm extends Component {
             this.props.onSaveComment(commentData);
         }
 
-        this.setState({redirect: true});
+        this.props.history.goBack();
     }
 
     render() {
 
         const {comment, category, postId} = this.props;
-        const {redirect} = this.state;
 
         return (
             <form onSubmit={e => this.handleOnSaveComment(e)}>
@@ -63,9 +59,6 @@ class CommentForm extends Component {
                         </button>
                     </NavLink>
                 </div>
-                {redirect && (
-                    <Redirect exact to={`/${category}/${postId}`}/>
-                )}
             </form>
         )
     }

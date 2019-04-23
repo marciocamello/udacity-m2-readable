@@ -1,14 +1,11 @@
 import React, {Component} from 'react';
-import {NavLink,Redirect} from "react-router-dom";
+import {NavLink, Redirect, withRouter} from "react-router-dom";
 import generateUID from "../../utils/GenerateUUID";
 
 class PostForm extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            redirect: false,
-        };
     }
 
     handleOnSavePost(e) {
@@ -31,13 +28,12 @@ class PostForm extends Component {
             this.props.onSavePost(postData);
         }
 
-        this.setState({redirect: true});
+        this.props.history.goBack();
     }
 
     render() {
 
         const {post, categories} = this.props;
-        const {redirect} = this.state;
 
         return (
             <form onSubmit={e => this.handleOnSavePost(e)}>
@@ -80,12 +76,9 @@ class PostForm extends Component {
                         <button type="button" className="btn btn-danger">Cancel</button>
                     </NavLink>
                 </div>
-                {redirect && (
-                    <Redirect exact to={'/'}/>
-                )}
             </form>
         )
     }
 }
 
-export default PostForm;
+export default withRouter(PostForm);
