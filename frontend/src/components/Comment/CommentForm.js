@@ -1,12 +1,8 @@
 import React, {Component} from 'react';
-import {NavLink, Redirect, withRouter} from "react-router-dom";
+import {NavLink, withRouter} from "react-router-dom";
 import generateUID from "../../utils/GenerateUUID";
 
 class CommentForm extends Component {
-
-    constructor(props) {
-        super(props);
-    }
 
     handleOnSaveComment(e) {
 

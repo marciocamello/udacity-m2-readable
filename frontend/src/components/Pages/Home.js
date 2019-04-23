@@ -3,7 +3,7 @@ import CategoryContainer from "../Category/CategoryContainer";
 import BannerContainer from "../Banner/BannerContainer";
 import PostContainer from "../Post/PostContainer";
 import connect from "react-redux/es/connect/connect";
-import {filterPosts, savePostVote, removePost} from "../../actions/posts";
+import {filterPosts, savePostVote} from "../../actions/posts";
 
 class Home extends Component {
 

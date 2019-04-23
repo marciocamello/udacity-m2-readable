@@ -1,12 +1,8 @@
 import React, {Component} from 'react';
 import Octicon, {Trashcan} from "@githubprimer/octicons-react";
-import {Redirect, withRouter} from "react-router-dom";
+import {withRouter} from "react-router-dom";
 
 class RemoveCommentButton extends Component{
-
-    constructor (props) {
-        super(props);
-    }
 
     render () {
 
