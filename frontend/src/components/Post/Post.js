@@ -73,7 +73,7 @@ const Post = props => {
                             onCommentVote={onCommentVote}
                             onRemoveComment={onRemoveComment}
                             postId={postId}
-                            categoryId={post.category}
+                            category={post.category}
                         />
                     )}
                 </div>

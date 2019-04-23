@@ -3,7 +3,7 @@ import Comment from "./Comment";
 
 const ListComments = props => {
 
-    const {commentsPosts, onCommentVote, onRemoveComment} = props;
+    const {commentsPosts, postId, category, onCommentVote, onRemoveComment} = props;
 
     return (
         <React.Fragment>
@@ -14,6 +14,8 @@ const ListComments = props => {
                         <Comment
                             key={comment.id}
                             comment={comment}
+                            postId={postId}
+                            category={category}
                             onCommentVote={onCommentVote}
                             onRemoveComment={onRemoveComment}
                         />

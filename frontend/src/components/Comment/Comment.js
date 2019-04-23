@@ -1,12 +1,12 @@
 import React from 'react';
 import FormatDate from "../../utils/FormatDate";
 import CommentVote from "./CommentVote";
-import EditPostButton from "../Post/EditPostButton";
 import RemoveCommentButton from "./RemoveCommentButton";
+import EditCommentButton from "./EditCommentButton";
 
 const Comment = props => {
 
-    const {comment, onCommentVote, onRemoveComment} = props;
+        const {comment, category, onCommentVote, onRemoveComment} = props;
 
     return (
         <React.Fragment>
@@ -21,8 +21,10 @@ const Comment = props => {
                             </div>
                             <div className="col-2">
                                 <div className="row">
-                                    <EditPostButton
+                                    <EditCommentButton
                                         commentId={comment.id}
+                                        category={category}
+                                        postId={comment.parentId}
                                     />
                                     <RemoveCommentButton
                                         commentId={comment.id}

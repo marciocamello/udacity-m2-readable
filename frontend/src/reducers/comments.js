@@ -1,7 +1,12 @@
-import {POST_COMMENTS, COMMENT_VOTE, REMOVE_COMMENT} from "../actions/comments";
+import {SHOW_COMMENT, POST_COMMENTS, COMMENT_VOTE, REMOVE_COMMENT} from "../actions/comments";
 
 export default function (state = {}, action) {
     switch (action.type) {
+        case SHOW_COMMENT :
+            return {
+                ...state,
+                ...action.payload
+            };
         case POST_COMMENTS :
             return {
                 ...state,

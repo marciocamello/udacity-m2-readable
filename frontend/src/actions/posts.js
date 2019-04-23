@@ -115,24 +115,6 @@ export const savePost = postData => {
     }
 };
 
-export const REMOVE_POST = 'REMOVE_POST';
-
-export const receiveRemovePost = (post) => {
-    return {
-        type: REMOVE_POST,
-        payload: post
-    }
-};
-
-export const removePost = postId => {
-    return async (dispatch) => {
-        dispatch(showLoading());
-        const removePost = await API.deletePost(postId);
-        dispatch(receiveRemovePost(removePost));
-        dispatch(hideLoading());
-    }
-};
-
 export const EDIT_POST = 'EDIT_POST';
 
 export const receivePostEdit = (postId, updatePost) => {
@@ -148,6 +130,24 @@ export const editPost = (postId, postData) => {
         dispatch(showLoading());
         const updatePost = await API.editPost(postId, postData);
         dispatch(receivePostEdit(postId, updatePost));
+        dispatch(hideLoading());
+    }
+};
+
+export const REMOVE_POST = 'REMOVE_POST';
+
+export const receiveRemovePost = (post) => {
+    return {
+        type: REMOVE_POST,
+        payload: post
+    }
+};
+
+export const removePost = postId => {
+    return async (dispatch) => {
+        dispatch(showLoading());
+        const removePost = await API.deletePost(postId);
+        dispatch(receiveRemovePost(removePost));
         dispatch(hideLoading());
     }
 };

@@ -1,6 +1,25 @@
 import API from '../api/ReadableAPI';
 import {showLoading, hideLoading} from 'react-redux-loading';
 
+export const SHOW_COMMENT = 'SHOW_COMMENT';
+
+export const reveiveComment = (comment) => {
+    return {
+        type: SHOW_COMMENT,
+        payload: comment
+    }
+};
+
+export const getCommentById = commentId => {
+    return async (dispatch) => {
+        dispatch(showLoading());
+        const comment = await API.comment(commentId);
+        dispatch(reveiveComment(comment));
+        dispatch(hideLoading());
+    }
+};
+
+
 export const POST_COMMENTS = 'POST_COMMENTS';
 
 export const reveiveComments = (comments) => {
@@ -33,6 +52,43 @@ export const saveCommentVote = (commentId, option) => {
         dispatch(showLoading());
         const comment = await API.commentVote(commentId, option);
         dispatch(receiveCommentVote(comment));
+        dispatch(hideLoading());
+    }
+};
+
+export const ADD_COMMENT = 'ADD_COMMENT';
+
+export const receiveCommentAdd = (newComment) => {
+    return {
+        type: ADD_COMMENT,
+        payload: newComment
+    }
+};
+
+export const saveComment = commentData => {
+    return async (dispatch) => {
+        dispatch(showLoading());
+        const newComment = await API.addComment(commentData);
+        dispatch(receiveCommentAdd(newComment));
+        dispatch(hideLoading());
+    }
+};
+
+export const EDIT_COMMENT = 'EDIT_COMMENT';
+
+export const receiveCommentEdit = (commentId, updateComment) => {
+    return {
+        type: EDIT_COMMENT,
+        payload: updateComment,
+        commentId
+    }
+};
+
+export const editComment = (commentId, commentData) => {
+    return async (dispatch) => {
+        dispatch(showLoading());
+        const updateComment = await API.editComment(commentId, commentData);
+        dispatch(receiveCommentEdit(commentId, updateComment));
         dispatch(hideLoading());
     }
 };

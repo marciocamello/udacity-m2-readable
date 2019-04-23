@@ -10,8 +10,10 @@ import ViewPost from "./Post/ViewPost";
 import Home from "./Pages/Home";
 import AddPost from "./Post/AddPost";
 import {editPost, removePost, savePost} from "../actions/posts";
-import {removeComment} from "../actions/comments";
+import {editComment, getCommentById, removeComment, saveComment} from "../actions/comments";
 import EditPost from "./Post/EditPost";
+import EditComment from "./Comment/EditComment";
+import AddComment from "./Comment/AddComment";
 
 
 class App extends Component {
@@ -44,11 +46,23 @@ class App extends Component {
                         categories={this.props.categories}
                         handleSavePost={this.props.savePost}
                     />}/>
-                    <Route exact path='/:category/:postId/:edit' render={props => <EditPost
+                    <Route exact path='/:category/:postId/edit' render={props => <EditPost
                         {...props}
                         posts={this.props.posts}
                         categories={this.props.categories}
                         handleEditPost={this.props.editPost}
+                    />}/>
+                    <Route exact path='/:category/:postId/add-comment' render={props => <AddComment
+                        {...props}
+                        categories={this.props.categories}
+                        handleSaveComment={this.props.saveComment}
+                    />}/>
+                    <Route exact path='/:category/:postId/:commentId/edit-comment' render={props => <EditComment
+                        {...props}
+                        getCommentById={this.props.getCommentById}
+                        comment={this.props.comment}
+                        categories={this.props.categories}
+                        handleEditComment={this.props.editComment}
                     />}/>
                 </Fragment>
             </Switch>
@@ -56,13 +70,15 @@ class App extends Component {
     }
 }
 
-function mapStateToProps({categoriesReducer, postsReducer}) {
+function mapStateToProps({categoriesReducer, postsReducer, commentsReducer}) {
 
     let posts = postsReducer.posts ? postsReducer.posts : [];
+    let comment = commentsReducer.comment ? commentsReducer.comment : [];
 
     return {
         categories: categoriesReducer.categories ? categoriesReducer.categories : [],
-        posts: posts
+        posts,
+        comment,
     }
 }
 
@@ -71,7 +87,7 @@ const mapDispatchToProps = dispatch => {
         fetchInitialData: () => {
             dispatch(handleInitialData());
         },
-        savePost: (postForm) => {
+        savePost: postForm => {
             dispatch(savePost(postForm));
         },
         editPost: (postId, postForm) => {
@@ -79,6 +95,15 @@ const mapDispatchToProps = dispatch => {
         },
         removePost: postId => {
             dispatch(removePost(postId));
+        },
+        getCommentById: commentId => {
+            dispatch(getCommentById(commentId));
+        },
+        saveComment: (postId, commentForm) => {
+            dispatch(saveComment(commentForm));
+        },
+        editComment: (commentId, commentForm) => {
+            dispatch(editComment(commentId, commentForm));
         },
         removeComment: commentId => {
             dispatch(removeComment(commentId));

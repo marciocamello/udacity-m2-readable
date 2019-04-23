@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import {NavLink} from "react-router-dom";
+import {NavLink,Redirect} from "react-router-dom";
 import generateUID from "../../utils/GenerateUUID";
-import {Redirect} from 'react-router-dom';
 
 class PostForm extends Component {
 

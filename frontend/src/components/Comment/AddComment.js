@@ -1,26 +1,28 @@
 import React, {Component} from 'react';
-import PostForm from "./PostForm";
+import CommentForm from "./CommentForm";
 import {withRouter} from "react-router-dom";
 import CategoryContainer from "../Category/CategoryContainer";
 
-class AddPost extends Component {
+class AddComment extends Component {
 
     render() {
 
         const {categories, handleSavePost} = this.props;
+        const {postId} = this.props.match.params;
 
         return (
             <div className="container">
                 <CategoryContainer
                     categories={categories}
                     filterPosts={false}
+                    hideCreatePost={true}
                 />
-                <h1>Create New Post</h1>
+                <h1>Create New Comment</h1>
                 <div className="card mb-4 shadow-sm">
                     <div className="card-body">
-                        <PostForm
+                        <CommentForm
+                            postId={postId}
                             onSavePost={handleSavePost}
-                            categories={categories}
                         />
                     </div>
                 </div>
@@ -29,4 +31,4 @@ class AddPost extends Component {
     }
 }
 
-export default withRouter(AddPost);
+export default withRouter(AddComment);

@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 
 const ListCategories = props => {
 
-    const {categories, filterPosts} = props;
+    const {categories, filterPosts, hideCreatePost} = props;
 
     return (
         <div className="inner">
@@ -24,15 +24,17 @@ const ListCategories = props => {
                         ))}
                     </nav>
                 </div>
-                <div className={filterPosts ? 'col-3' : 'col-6'}>
-                    <nav className="nav nav-masthead justify-content-end">
-                        <li className="nav-item">
-                            <NavLink to="/add-post" exact activeClassName='active' className="nav-link text-uppercase">
-                                Create New Post
-                            </NavLink>
-                        </li>
-                    </nav>
-                </div>
+                {!hideCreatePost && (
+                    <div className={filterPosts ? 'col-3' : 'col-6'}>
+                        <nav className="nav nav-masthead justify-content-end">
+                            <li className="nav-item">
+                                <NavLink to="/add-post" exact activeClassName='active' className="nav-link text-uppercase">
+                                    Create New Post
+                                </NavLink>
+                            </li>
+                        </nav>
+                    </div>
+                )}
                 {filterPosts && (<div className="col-3">
                         <nav className="nav nav-masthead justify-content-end">
                             <select className="form-control" onChange={(e) => filterPosts(e)}>
