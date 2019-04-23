@@ -17,7 +17,8 @@ class PostForm extends Component {
 
         const postData = {
             title: e.target.title.value,
-            body: e.target.body.value
+            body: e.target.body.value,
+            category: e.target.category.value,
         };
 
         if (this.props.post) {
@@ -26,8 +27,6 @@ class PostForm extends Component {
 
         } else {
             postData.id = generateUID();
-            postData.author = e.target.author.value;
-            postData.category = e.target.category.value;
             postData.timestamp = new Date().getTime();
             this.props.onSavePost(postData);
         }
@@ -71,11 +70,6 @@ class PostForm extends Component {
                         ref={this.body}
                         required
                     />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="author" className='label-control'>Author</label>
-                    <input type="text" defaultValue={post ? post.author : ''} name="author" className='form-control'
-                           ref={this.author} required/>
                 </div>
                 <div className="form-group">
                     <button className={post ? 'btn btn-info mr-2' : 'btn btn-success mr-2'} type="submit">

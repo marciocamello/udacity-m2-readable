@@ -1,6 +1,5 @@
 import API from '../api/ReadableAPI';
 import {showLoading, hideLoading} from 'react-redux-loading';
-import generateUID from "../utils/GenerateUUID";
 
 export const POSTS = 'POSTS';
 
@@ -41,7 +40,7 @@ export const getPost = (postId) => {
 export const POSTS_BY_DATE = 'POSTS_BY_DATE';
 
 export const filterPostsByDate = (posts) => {
-    const filterPosts = posts.slice().sort((a, b) => b.timestamp - a.timestamp);
+    const filterPosts = posts.sort((a, b) => (a.timestamp - b.timestamp ? -1 : 1));
     return {
         type: POSTS_BY_DATE,
         payload: filterPosts
@@ -51,10 +50,7 @@ export const filterPostsByDate = (posts) => {
 export const POSTS_BY_VOTE_SCORE = 'POSTS_BY_VOTE_SCORE';
 
 export const filterPostsByVoteScore = (posts) => {
-    const filterPosts = posts.slice().sort((a, b) => {
-        if (a.voteScore > b.voteScore) return 1;
-        if (a.voteScore < b.voteScore) return -1;
-    });
+    const filterPosts = posts.sort((a, b) => (a.voteScore - b.voteScore ? -1 : 1));
     return {
         type: POSTS_BY_VOTE_SCORE,
         payload: filterPosts

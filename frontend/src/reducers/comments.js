@@ -1,4 +1,4 @@
-import {SHOW_COMMENT, POST_COMMENTS, COMMENT_VOTE, REMOVE_COMMENT} from "../actions/comments";
+import {SHOW_COMMENT, POST_COMMENTS, COMMENT_VOTE, REMOVE_COMMENT, EDIT_COMMENT} from "../actions/comments";
 
 export default function (state = {}, action) {
     switch (action.type) {
@@ -17,10 +17,23 @@ export default function (state = {}, action) {
                 ...state,
                 comment: action.payload
             };
-        case REMOVE_COMMENT :
+        case EDIT_COMMENT :
+            const editComments = state.postComments ?
+                state.postComments.filter(comment => comment.id !== action.commentId)
+                : [];
             return {
                 ...state,
-                postComments: state.postComments.filter(comment => comment.id !== action.payload.id)
+                comment: action.payload,
+                postComments: [
+                    ...editComments,
+                    action.payload
+                ]
+            };
+        case REMOVE_COMMENT :
+            const removeComments = state.postComments.filter(comment => comment.id !== action.commentId);
+            return {
+                ...state,
+                postComments: removeComments
             };
         default :
             return state

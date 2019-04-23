@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {NavLink, Redirect} from "react-router-dom";
+import {NavLink, Redirect, withRouter} from "react-router-dom";
 import generateUID from "../../utils/GenerateUUID";
 
 class CommentForm extends Component {
@@ -71,4 +71,4 @@ class CommentForm extends Component {
     }
 }
 
-export default CommentForm;
+export default withRouter(CommentForm);

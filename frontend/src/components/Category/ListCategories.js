@@ -40,7 +40,7 @@ const ListCategories = props => {
                             <select className="form-control" onChange={(e) => filterPosts(e)}>
                                 <option value="">All</option>
                                 <option value="Date">Order By Date</option>
-                                {/*<option value="VoteScore">Order By VoteScore</option>*/}
+                                <option value="VoteScore">Order By VoteScore</option>
                             </select>
                         </nav>
                     </div>
