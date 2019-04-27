@@ -2,42 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3c5a1ae-be9c-4ac3-af09-ed3b98dbd1dd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/cypress/integration/0_0_redux_posts_spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/cypress/integration/0_1_redux_comments_spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/cypress/integration/10_remove_comment_on_post_spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/cypress/integration/11_filter_posts_by_category_spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/cypress/integration/1_show_banner_post_spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/cypress/integration/2_show_post_by_category_spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/cypress/integration/3_show_post_comments_spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/cypress/integration/4_show_post_spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/cypress/integration/5_create_post_spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/cypress/integration/6_edit_post_spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/cypress/integration/7_remove_post_spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/cypress/integration/8_create_comnent_on_post_spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/cypress/integration/9_edit_comnent_on_post_spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/cypress/integration/change_book_to_shelf_spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/cypress/integration/check_if_exist_three_shelves_spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/cypress/integration/go_to_search_page_and_search_a_book_spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/cypress/integration/go_to_search_page_spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Banner/BannerContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Banner/BannerContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Category/Category.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Category/Category.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Category/ListCategories.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Category/ListCategories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Comment/CommentForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Comment/CommentForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Comment/CommentVote.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Comment/CommentVote.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Comment/EditCommentButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Comment/EditCommentButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Comment/ListComments.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Comment/ListComments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Comment/RemoveCommentButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Comment/RemoveCommentButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Post/EditPostButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Post/EditPostButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Post/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Post/Post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Post/PostContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Post/PostContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Post/PostForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Post/PostForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Post/PostLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Post/PostLink.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Post/PostVote.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Post/PostVote.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Post/RemovePostButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Post/RemovePostButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -75,9 +40,9 @@
           <entry key="css" value="7" />
           <entry key="env" value="3" />
           <entry key="html" value="5" />
-          <entry key="js" value="970" />
+          <entry key="js" value="973" />
           <entry key="json" value="16" />
-          <entry key="md" value="28" />
+          <entry key="md" value="33" />
           <entry key="ts" value="3" />
         </counts>
       </usages-collector>
@@ -86,8 +51,8 @@
           <entry key="CSS" value="7" />
           <entry key="HTML" value="5" />
           <entry key="JSON" value="16" />
-          <entry key="JavaScript" value="970" />
-          <entry key="PLAIN_TEXT" value="31" />
+          <entry key="JavaScript" value="973" />
+          <entry key="PLAIN_TEXT" value="36" />
           <entry key="TypeScript" value="3" />
         </counts>
       </usages-collector>
@@ -95,9 +60,9 @@
         <counts>
           <entry key="css" value="48" />
           <entry key="html" value="7" />
-          <entry key="js" value="23255" />
+          <entry key="js" value="23258" />
           <entry key="json" value="40" />
-          <entry key="md" value="1268" />
+          <entry key="md" value="1284" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -105,8 +70,8 @@
           <entry key="CSS" value="48" />
           <entry key="HTML" value="7" />
           <entry key="JSON" value="40" />
-          <entry key="JavaScript" value="23255" />
-          <entry key="PLAIN_TEXT" value="1268" />
+          <entry key="JavaScript" value="23258" />
+          <entry key="PLAIN_TEXT" value="1284" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -118,11 +83,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/cypress/integration/11_filter_posts_by_category_spec.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/docs/docs.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+            <state relative-caret-position="240">
+              <caret line="16" column="7" lean-forward="true" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/docs/test.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" lean-forward="true" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/docs/run.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" lean-forward="true" selection-end-line="58" selection-end-column="104" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/docs/structure.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="54" lean-forward="true" selection-end-line="77" />
             </state>
           </provider>
         </entry>
@@ -175,8 +176,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/frontend/src/components/Post/ViewPost.js" />
-        <option value="$PROJECT_DIR$/frontend/src/components/Comment/AddComment.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/App.js" />
         <option value="$PROJECT_DIR$/frontend/src/actions/comments.js" />
         <option value="$PROJECT_DIR$/frontend/src/reducers/comments.js" />
@@ -187,7 +186,6 @@
         <option value="$PROJECT_DIR$/frontend/docs/test.md" />
         <option value="$PROJECT_DIR$/frontend/package.json" />
         <option value="$PROJECT_DIR$/frontend/docs/structure.md" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/frontend/src/index.js" />
         <option value="$PROJECT_DIR$/frontend/cypress/integration/comment_spec.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/Pages/Home.js" />
@@ -226,6 +224,9 @@
         <option value="$PROJECT_DIR$/frontend/cypress/integration/10_10_remove_comment_on_post_spec.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/Category/ListCategories.js" />
         <option value="$PROJECT_DIR$/frontend/cypress/integration/11_filter_posts_by_category_spec.js" />
+        <option value="$PROJECT_DIR$/frontend/cypress/integration/12_filter_posts_by_date_spec.js" />
+        <option value="$PROJECT_DIR$/frontend/cypress/integration/11_filter_posts_by_score_spec.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -269,91 +270,13 @@
             <path>
               <item name="leitura" type="b2602c69:ProjectViewProjectNode" />
               <item name="leitura" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="leitura" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leitura" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="leitura" type="b2602c69:ProjectViewProjectNode" />
               <item name="leitura" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="cypress" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="leitura" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leitura" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="cypress" type="462c0819:PsiDirectoryNode" />
-              <item name="integration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="leitura" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leitura" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="leitura" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leitura" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="leitura" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leitura" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="leitura" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leitura" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Category" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="leitura" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leitura" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Comment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="leitura" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leitura" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="leitura" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leitura" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Post" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="leitura" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leitura" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="middleware" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="leitura" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leitura" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -418,12 +341,12 @@
       <workItem from="1556034251794" duration="138000" />
       <workItem from="1556061567946" duration="4283000" />
       <workItem from="1556327452444" duration="5777000" />
-      <workItem from="1556361633615" duration="19249000" />
+      <workItem from="1556361633615" duration="19555000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116861000" />
+    <option name="totallyTimeSpent" value="117167000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1014" extended-state="6" />
@@ -460,52 +383,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frontend/cypress.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/middleware/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Banner/BannerContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Pages/Home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/Comment/ListComments.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -839,10 +716,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/cypress/integration/11_filter_posts_by_category_spec.js">
+    <entry file="file://$PROJECT_DIR$/frontend/cypress/integration/11_filter_posts_by_score_spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        <state relative-caret-position="180">
+          <caret line="12" column="48" lean-forward="true" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/cypress/integration/12_filter_posts_by_date_spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/docs/structure.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="54" lean-forward="true" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/docs/run.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" lean-forward="true" selection-end-line="58" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/docs/test.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/docs/docs.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="7" lean-forward="true" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
         </state>
       </provider>
     </entry>
