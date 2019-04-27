@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Structure | Readable</title>
+    <meta name="description" content="A Shelf book area, to read your prefer books">
+    
+    
+    <link rel="preload" href="/udacity-m2-readable/assets/css/0.styles.4bd059c7.css" as="style"><link rel="preload" href="/udacity-m2-readable/assets/js/app.ecd4597e.js" as="script"><link rel="preload" href="/udacity-m2-readable/assets/js/15.6600555d.js" as="script"><link rel="prefetch" href="/udacity-m2-readable/assets/js/10.20033d77.js"><link rel="prefetch" href="/udacity-m2-readable/assets/js/11.14e21cc6.js"><link rel="prefetch" href="/udacity-m2-readable/assets/js/12.89830b38.js"><link rel="prefetch" href="/udacity-m2-readable/assets/js/13.a5ee1492.js"><link rel="prefetch" href="/udacity-m2-readable/assets/js/14.98258a54.js"><link rel="prefetch" href="/udacity-m2-readable/assets/js/16.9d8854d9.js"><link rel="prefetch" href="/udacity-m2-readable/assets/js/17.1bf4a649.js"><link rel="prefetch" href="/udacity-m2-readable/assets/js/2.6c828489.js"><link rel="prefetch" href="/udacity-m2-readable/assets/js/3.5a2757af.js"><link rel="prefetch" href="/udacity-m2-readable/assets/js/4.a5512e17.js"><link rel="prefetch" href="/udacity-m2-readable/assets/js/5.abd1b2d5.js"><link rel="prefetch" href="/udacity-m2-readable/assets/js/6.d9f1ab89.js"><link rel="prefetch" href="/udacity-m2-readable/assets/js/7.3c2cc952.js"><link rel="prefetch" href="/udacity-m2-readable/assets/js/8.143d1388.js"><link rel="prefetch" href="/udacity-m2-readable/assets/js/9.8482c9de.js">
+    <link rel="stylesheet" href="/udacity-m2-readable/assets/css/0.styles.4bd059c7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/udacity-m2-readable/" class="home-link router-link-active"><!----> <span class="site-name">Readable</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/udacity-m2-readable/structure.html" class="nav-link router-link-exact-active router-link-active">English</a></li><li class="dropdown-item"><!----> <a href="/udacity-m2-readable/br/structure.html" class="nav-link">Português</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/udacity-m2-readable/structure.html" class="nav-link router-link-exact-active router-link-active">English</a></li><li class="dropdown-item"><!----> <a href="/udacity-m2-readable/br/structure.html" class="nav-link">Português</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/udacity-m2-readable/" class="sidebar-link">Home</a></li><li><a href="/udacity-m2-readable/main.html" class="sidebar-link">Description</a></li><li><a href="/udacity-m2-readable/features.html" class="sidebar-link">Features</a></li><li><a href="/udacity-m2-readable/structure.html" class="active sidebar-link">Structure</a></li><li><a href="/udacity-m2-readable/run.html" class="sidebar-link">Instructions to Run Application</a></li><li><a href="/udacity-m2-readable/test.html" class="sidebar-link">Instructions to Run Tests</a></li><li><a href="/udacity-m2-readable/docs.html" class="sidebar-link">Instructions to Generate Docs by VuePressJS</a></li></ul> </div> <div class="page"> <div class="content"><h1 id="structure"><a href="#structure" aria-hidden="true" class="header-anchor">#</a> Structure</h1> <div class="language- extra-class"><pre class="language-text"><code>api
+├── README.md - This file.
+├── package.json # npm package manager file. It's unlikely that you'll need to modify this.
+├── server.js # Server instance
+├── config.js # Server settings params
+├── categories.js # Categories methods from API
+├── posts.js # Posts methods from API
+├── comments.js # Comments methods from API
+
+frontend
+├── README.md - This file.
+├── cypress # Is a tool to test this application
+├── docs # Is a tool to generate docs using VuePressJS
+├── package.json # npm package manager file. It's unlikely that you'll need to modify this.
+├── public
+│   ├── favicon.ico # React Icon, You may change if you wish.
+│   └── index.html # DO NOT MODIFY
+└── src
+    ├── api
+        |── ReadableAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
+    ├── utils # Util functions to use
+        ├── GenerateUUID.js
+        ├── FormatDate.js
+    ├── reducers # Reducers integrated with API
+        ├── categories.js
+        ├── comments.js
+        ├── index.js
+        ├── posts.js
+    ├── middleware # Middleware's in use in application
+        ├── index.js
+        ├── logger.js
+    ├── actions # Types and all actions to mutation states
+        ├── categories.js
+        ├── comments.js
+        ├── posts.js
+        ├── shared.js
+    ├── components # Helpful images for your app. Use at your discretion.
+        ├── Banner # Initial banner contain a first post by category
+            ├── BannerContainer.js
+        ├── Category # List all categories to menu
+            ├── Category.js
+            ├── CategoryContainer.js
+            ├── ListCategories.js
+        ├── Comment # List, add, edit, vote and remove comments
+            ├── AddComment.js
+            ├── Comment.js
+            ├── CommentContainer.js
+            ├── CommentForm.js
+            ├── CommentVote.js
+            ├── EditComment.js
+            ├── EditCommentButton.js
+            ├── ListComments.js
+            ├── RemoveCommentButton.js
+        ├── Header #
+            ├── HeaderContainer.js
+        ├── Pages # Home page with all posts and banner
+            ├── Home.js
+        ├── Post # List, add, edit, vote and remove posts, and list comments by post
+            ├── AddPost.js
+            ├── EditPost.js
+            ├── EditPostButton.js
+            ├── ListPosts.js
+            ├── Post.js
+            ├── PostContainer.js
+            ├── PostForm.js
+            ├── PostLink.js
+            ├── PostVote.js
+            ├── RemovePostButton.js
+            ├── ViewPost.js
+        ├── App.js # This is the root of your app. Contains static HTML right now.
+    │   ├── Loading.js # Custom loading to use in async requests
+    ├── index.css # Global styles. You probably won't need to change anything here.
+    └── index.js # You should not need to modify this file. It is used for DOM rendering only.
+</code></pre></div></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/udacity-m2-readable/features.html" class="prev">
+          Features
+        </a></span> <span class="next"><a href="/udacity-m2-readable/run.html">
+          Instructions to Run Application
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/udacity-m2-readable/assets/js/app.ecd4597e.js" defer></script><script src="/udacity-m2-readable/assets/js/15.6600555d.js" defer></script>
+  </body>
+</html>
