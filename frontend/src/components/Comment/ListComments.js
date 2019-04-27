@@ -9,7 +9,7 @@ const ListComments = props => {
         <React.Fragment>
             {commentsPosts && commentsPosts.length > 0 && (
                 <div id="list-comments">
-                    <h1>Comments</h1>
+                    <h1>Comments ({commentsPosts.length})</h1>
                     {commentsPosts.map(comment => (
                         <Comment
                             key={comment.id}
