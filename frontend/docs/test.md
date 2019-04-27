@@ -1,4 +1,4 @@
-## Instructions to Run Tests
+# Instructions to Run Tests
 
 ```bash
 npm run cypress or yarn cypress

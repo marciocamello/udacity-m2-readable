@@ -96,10 +96,11 @@ export const editComment = (commentId, commentData) => {
 
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 
-export const receiveRemoveComment = (comment) => {
+export const receiveRemoveComment = (commentId, comment) => {
     return {
         type: REMOVE_COMMENT,
-        payload: comment
+        payload: comment,
+        commentId
     }
 };
 
@@ -107,7 +108,7 @@ export const removeComment = commentId => {
     return async (dispatch) => {
         dispatch(showLoading());
         const removeComment = await API.deleteComment(commentId);
-        dispatch(receiveRemoveComment(removeComment));
+        dispatch(receiveRemoveComment(commentId, removeComment));
         dispatch(hideLoading());
     }
 };

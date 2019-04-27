@@ -1,4 +1,4 @@
-## Instructions to Generate Docs by VuePressJS
+# Instructions to Generate Docs by VuePressJS
 
 - Development
 

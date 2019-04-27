@@ -7,8 +7,7 @@ class AddComment extends Component {
 
     render() {
 
-        const {categories, handleSavePost} = this.props;
-        const {postId} = this.props.match.params;
+        const {categories, handleSaveComment} = this.props;
 
         return (
             <div className="container">
@@ -21,8 +20,7 @@ class AddComment extends Component {
                 <div className="card mb-4 shadow-sm">
                     <div className="card-body">
                         <CommentForm
-                            postId={postId}
-                            onSavePost={handleSavePost}
+                            onSaveComment={handleSaveComment}
                         />
                     </div>
                 </div>

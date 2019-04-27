@@ -68,13 +68,22 @@ const Post = props => {
                         </div>
                     </div>
                     {postId && (
-                        <CommentContainer
-                            commentsPosts={commentsPosts}
-                            onCommentVote={onCommentVote}
-                            onRemoveComment={onRemoveComment}
-                            postId={postId}
-                            category={post.category}
-                        />
+                        <div>
+                            <nav className="nav nav-masthead justify-content-end">
+                                <li className="nav-item">
+                                    <NavLink to={`/${post.category}/${postId}/add-comment`} exact activeClassName='active' className="nav-link text-uppercase btn btn-sm btn-primary">
+                                        Create New Comment
+                                    </NavLink>
+                                </li>
+                            </nav>
+                            <CommentContainer
+                                commentsPosts={commentsPosts}
+                                onCommentVote={onCommentVote}
+                                onRemoveComment={onRemoveComment}
+                                postId={postId}
+                                category={post.category}
+                            />
+                        </div>
                     )}
                 </div>
             )}

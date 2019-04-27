@@ -1,10 +1,17 @@
 import React, {Component} from 'react';
-import {NavLink, withRouter} from "react-router-dom";
+import {Redirect, withRouter} from "react-router-dom";
 import generateUID from "../../utils/GenerateUUID";
 import {Field, reduxForm} from 'redux-form';
 import connect from "react-redux/es/connect/connect";
 
 class PostForm extends Component {
+
+    constructor (props) {
+        super(props);
+        this.state = {
+            redirect: false
+        }
+    }
 
     handleOnSavePost(postData) {
 
@@ -18,7 +25,18 @@ class PostForm extends Component {
             this.props.onSavePost(postData);
         }
 
-        this.props.history.goBack();
+        this.handleRedirectPost();
+    }
+
+    handleRedirectPost () {
+
+        if (this.props.match.path === '/:category/:postId/edit') {
+            this.props.history.goBack();
+        }else{
+            this.setState({
+                redirect: true
+            })
+        }
     }
 
     render() {
@@ -56,6 +74,9 @@ class PostForm extends Component {
                     <button className={post ? 'btn btn-info mr-2' : 'btn btn-success mr-2'} type="submit">
                         {post ? 'Update' : 'Save'}
                     </button>
+                    {this.state.redirect && (
+                        <Redirect to={`/`} />
+                    )}
                     <button type="button" className="btn btn-danger" onClick={() => this.props.history.goBack()}>
                         Cancel
                     </button>

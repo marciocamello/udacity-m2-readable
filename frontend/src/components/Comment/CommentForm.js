@@ -15,6 +15,7 @@ class CommentForm extends Component {
         } else {
             commentData.id = generateUID();
             commentData.timestamp = new Date().getTime();
+            commentData.parentId = this.props.match.params.postId;
             this.props.onSaveComment(commentData);
         }
 
@@ -30,6 +31,10 @@ class CommentForm extends Component {
             <div className="form-group">
                 <label htmlFor="body" className='label-control'>Body</label>
                 <Field name="body" className='form-control' component="input" type="text" />
+            </div>
+            <div className="form-group">
+                <label htmlFor="author" className='label-control'>Author</label>
+                <Field name="author" className='form-control' component="input" type="text"/>
             </div>
             <div className="form-group">
                 <button className={comment ? 'btn btn-info mr-2' : 'btn btn-success mr-2'} type="submit">

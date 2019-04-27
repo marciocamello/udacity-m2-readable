@@ -28,7 +28,7 @@ const ListCategories = props => {
                     <div className={filterPosts ? 'col-3' : 'col-6'}>
                         <nav className="nav nav-masthead justify-content-end">
                             <li className="nav-item">
-                                <NavLink to="/add-post" exact activeClassName='active' className="nav-link text-uppercase">
+                                <NavLink to="/add-post" exact activeClassName='active' className={filterPosts ? 'nav-link text-uppercase' : 'nav-link text-uppercase btn btn-sm btn-primary'}>
                                     Create New Post
                                 </NavLink>
                             </li>

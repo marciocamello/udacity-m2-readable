@@ -99,7 +99,7 @@ const mapDispatchToProps = dispatch => {
         getCommentById: commentId => {
             dispatch(getCommentById(commentId));
         },
-        saveComment: (postId, commentForm) => {
+        saveComment: commentForm => {
             dispatch(saveComment(commentForm));
         },
         editComment: (commentId, commentForm) => {
