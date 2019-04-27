@@ -8,7 +8,7 @@ const BannerContainer = props => {
     return (
         <div>
             {posts && posts.length > 0 && (<div className="jumbotron p-4 p-md-5 text-white rounded bg-dark">
-                    <div className="col-md-6 px-0">
+                    <div id="banner" className="col-md-6 px-0">
                         <h1 className="display-4 font-italic">{posts[0].title}</h1>
                         <blockquote className="blockquote">
                             <p className="mb-0 d-inline-block text-truncate">{posts[0].body}</p>

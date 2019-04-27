@@ -8,7 +8,7 @@ const EditPostButton = props => {
 
     return (
         <NavLink to={`/${postCategory}/${postId}/edit`}>
-            <button className="btn btn-sm btn-outline-success float-right mr-2">
+            <button id="edit-post" className="btn btn-sm btn-outline-success float-right mr-2">
                 <Octicon icon={Pencil}/> Edit
             </button>
         </NavLink>

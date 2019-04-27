@@ -18,3 +18,8 @@ ReactDOM.render(
     </BrowserRouter>,
     document.getElementById('root')
 );
+
+// expose store when run in Cypress
+if (window.Cypress) {
+    window.store = store
+}

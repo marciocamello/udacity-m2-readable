@@ -6,7 +6,7 @@ const PostContainer = props => {
     const {posts, onPostVote, onRemovePost} = props;
 
     return (
-        <div className="row mb-2">
+        <div id="list-posts" className="row mb-2">
             <ListPosts
                 posts={posts}
                 onPostVote={onPostVote}

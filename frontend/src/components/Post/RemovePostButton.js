@@ -17,7 +17,7 @@ class RemovePostButton extends Component{
 
         return (
             <div>
-                <button className="btn btn-sm btn-outline-danger float-right" onClick={() => {
+                <button id="remove-post" className="btn btn-sm btn-outline-danger float-right" onClick={() => {
                     if (window.confirm('You are sure?')) {
                         onRemovePost(postId);
                         this.setState({redirect: true});

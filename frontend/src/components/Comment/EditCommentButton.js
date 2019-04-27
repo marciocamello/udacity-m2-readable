@@ -8,7 +8,7 @@ const EditCommentButton = props => {
 
     return (
         <Link to={`/${category}/${postId}/${commentId}/edit-comment`}>
-            <button className="btn btn-sm btn-outline-success float-right mr-2">
+            <button id="edit-comment" className="btn btn-sm btn-outline-success float-right mr-2">
                 <Octicon icon={Pencil}/> Edit
             </button>
         </Link>

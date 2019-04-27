@@ -27,7 +27,7 @@ class CommentForm extends Component {
         const {comment, handleSubmit} = this.props;
 
         return (
-        <form onSubmit={handleSubmit(comment => this.handleOnSaveComment(comment))}>
+        <form id="save-comment" onSubmit={handleSubmit(comment => this.handleOnSaveComment(comment))}>
             <div className="form-group">
                 <label htmlFor="body" className='label-control'>Body</label>
                 <Field name="body" className='form-control' component="input" type="text" />

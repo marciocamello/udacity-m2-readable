@@ -10,7 +10,7 @@ class RemoveCommentButton extends Component{
 
         return (
             <div>
-                <button className="btn btn-sm btn-outline-danger float-right" onClick={() => {
+                <button id="remove-comment" className="btn btn-sm btn-outline-danger float-right" onClick={() => {
                     if (window.confirm('You are sure?')) {
                         onRemoveComment(commentId);
                         this.setState({redirect: true});

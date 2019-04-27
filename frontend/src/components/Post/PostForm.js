@@ -44,7 +44,7 @@ class PostForm extends Component {
         const {post, categories, handleSubmit} = this.props;
 
         return (
-            <form onSubmit={handleSubmit(post => this.handleOnSavePost(post))}>
+            <form id="save-post" onSubmit={handleSubmit(post => this.handleOnSavePost(post))}>
                 <div className="form-group">
                     <label htmlFor="category" className='label-control'>Category</label>
                     <Field name="category" component="select" className='form-control' required>

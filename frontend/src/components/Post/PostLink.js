@@ -10,7 +10,7 @@ const PostLink = props => {
             {postId && (
                 <div className="btn-group">
                     <NavLink to={`/${postCategory}/${postId}`} exact>
-                        <button type="button" className="btn btn-sm btn-outline-success">View</button>
+                        <button id="show-post" type="button" className="btn btn-sm btn-outline-success">View</button>
                     </NavLink>
                 </div>
             )}
