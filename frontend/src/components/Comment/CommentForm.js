@@ -1,18 +1,12 @@
 import React, {Component} from 'react';
-import {NavLink, withRouter} from "react-router-dom";
+import {withRouter} from "react-router-dom";
 import generateUID from "../../utils/GenerateUUID";
+import { Field, reduxForm } from 'redux-form';
+import connect from "react-redux/es/connect/connect";
 
 class CommentForm extends Component {
 
-    handleOnSaveComment(e) {
-
-        e.preventDefault();
-
-        const commentData = {
-            author: this.props.comment.author,
-            parentId: this.props.comment.parentId,
-            body: e.target.body.value
-        };
+    handleOnSaveComment(commentData) {
 
         if (this.props.comment) {
 
@@ -29,35 +23,34 @@ class CommentForm extends Component {
 
     render() {
 
-        const {comment, category, postId} = this.props;
+        const {comment, handleSubmit} = this.props;
 
         return (
-            <form onSubmit={e => this.handleOnSaveComment(e)}>
-                <div className="form-group">
-                    <label htmlFor="body" className='label-control'>Body</label>
-                    <input
-                        type="text"
-                        name="body"
-                        className='form-control'
-                        defaultValue={comment ? comment.body : ''}
-                        ref={this.body}
-                        required
-                    />
-                </div>
-                <div className="form-group">
-                    <button className={comment ? 'btn btn-info mr-2' : 'btn btn-success mr-2'} type="submit">
-                        {comment ? 'Update' : 'Save'}
-                    </button>
-                    <
-                        NavLink to={`/${category}/${postId}`} exact>
-                        <button type="button" className="btn btn-danger">
-                            Back To Post
-                        </button>
-                    </NavLink>
-                </div>
-            </form>
+        <form onSubmit={handleSubmit(comment => this.handleOnSaveComment(comment))}>
+            <div className="form-group">
+                <label htmlFor="body" className='label-control'>Body</label>
+                <Field name="body" className='form-control' component="input" type="text" />
+            </div>
+            <div className="form-group">
+                <button className={comment ? 'btn btn-info mr-2' : 'btn btn-success mr-2'} type="submit">
+                    {comment ? 'Update' : 'Save'}
+                </button>
+                <button type="button" className="btn btn-danger" onClick={() => this.props.history.goBack()}>
+                    Back To Post
+                </button>
+            </div>
+        </form>
         )
     }
 }
 
-export default withRouter(CommentForm);
+const mapStateToProps = (state, props) => ({
+    initialValues: props.comment
+});
+
+export default withRouter(connect(
+    mapStateToProps
+)(reduxForm({
+    form: 'CommentForm',
+    enableReinitialize: true
+})(CommentForm)))

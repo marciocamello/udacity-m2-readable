@@ -1,18 +1,12 @@
 import React, {Component} from 'react';
 import {NavLink, withRouter} from "react-router-dom";
 import generateUID from "../../utils/GenerateUUID";
+import {Field, reduxForm} from 'redux-form';
+import connect from "react-redux/es/connect/connect";
 
 class PostForm extends Component {
 
-    handleOnSavePost(e) {
-
-        e.preventDefault();
-
-        const postData = {
-            title: e.target.title.value,
-            body: e.target.body.value,
-            category: e.target.category.value,
-        };
+    handleOnSavePost(postData) {
 
         if (this.props.post) {
 
@@ -29,14 +23,13 @@ class PostForm extends Component {
 
     render() {
 
-        const {post, categories} = this.props;
+        const {post, categories, handleSubmit} = this.props;
 
         return (
-            <form onSubmit={e => this.handleOnSavePost(e)}>
+            <form onSubmit={handleSubmit(post => this.handleOnSavePost(post))}>
                 <div className="form-group">
                     <label htmlFor="category" className='label-control'>Category</label>
-                    <select name="category" defaultValue={post ? post.category : ''} className='form-control'
-                            ref={this.category} required>
+                    <Field name="category" component="select" className='form-control' required>
                         {categories && categories.length > 0 && (
                             categories.map(category => (
                                 <option
@@ -45,36 +38,40 @@ class PostForm extends Component {
                                 >{category.name}</option>
                             ))
                         )}
-                    </select>
+                    </Field>
                 </div>
                 <div className="form-group">
                     <label htmlFor="title" className='label-control'>Title</label>
-                    <input type="text" defaultValue={post ? post.title : ''} name="title" className='form-control'
-                           ref={this.title} required/>
+                    <Field name="title" className='form-control' component="input" type="text"/>
                 </div>
                 <div className="form-group">
                     <label htmlFor="body" className='label-control'>Body</label>
-                    <input
-                        type="text"
-                        name="body"
-                        className='form-control'
-                        defaultValue={post ? post.body : ''}
-                        ref={this.body}
-                        required
-                    />
+                    <Field name="body" className='form-control' component="input" type="text"/>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="author" className='label-control'>Author</label>
+                    <Field name="author" className='form-control' component="input" type="text"/>
                 </div>
                 <div className="form-group">
                     <button className={post ? 'btn btn-info mr-2' : 'btn btn-success mr-2'} type="submit">
                         {post ? 'Update' : 'Save'}
                     </button>
-                    <
-                        NavLink to='/' exact>
-                        <button type="button" className="btn btn-danger">Cancel</button>
-                    </NavLink>
+                    <button type="button" className="btn btn-danger" onClick={() => this.props.history.goBack()}>
+                        Cancel
+                    </button>
                 </div>
             </form>
         )
     }
 }
 
-export default withRouter(PostForm);
+const mapStateToProps = (state, props) => ({
+    initialValues: props.post
+});
+
+export default withRouter(connect(
+    mapStateToProps
+)(reduxForm({
+    form: 'PostForm',
+    enableReinitialize: true
+})(PostForm)));

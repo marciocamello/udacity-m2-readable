@@ -3,10 +3,11 @@ import {showLoading, hideLoading} from 'react-redux-loading';
 
 export const SHOW_COMMENT = 'SHOW_COMMENT';
 
-export const reveiveComment = (comment) => {
+export const reveiveComment = (comment, commentId) => {
     return {
         type: SHOW_COMMENT,
-        payload: comment
+        payload: comment,
+        commentId,
     }
 };
 
@@ -14,7 +15,7 @@ export const getCommentById = commentId => {
     return async (dispatch) => {
         dispatch(showLoading());
         const comment = await API.comment(commentId);
-        dispatch(reveiveComment(comment));
+        dispatch(reveiveComment(comment, commentId));
         dispatch(hideLoading());
     }
 };
