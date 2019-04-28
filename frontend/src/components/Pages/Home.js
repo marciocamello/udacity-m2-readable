@@ -55,7 +55,7 @@ const mapStateToProps = ({categoriesReducer, postsReducer, commentsReducer}, own
         posts: filteredPosts.map(p => {
             if (post.id === p.id) {
                 p.voteScore = post.voteScore;
-                p.commentCount = commentsPosts.length;
+                p.commentCount = post.commentCount;
             }
             return p;
         })
