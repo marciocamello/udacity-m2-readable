@@ -8,6 +8,8 @@ import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 import { BrowserRouter } from 'react-router-dom';
 
+import './bootstrap.min.css';
+
 const store = createStore(reducer, middleware);
 
 ReactDOM.render(
