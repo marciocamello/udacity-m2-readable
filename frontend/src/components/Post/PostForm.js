@@ -6,7 +6,7 @@ import connect from "react-redux/es/connect/connect";
 
 class PostForm extends Component {
 
-    constructor (props) {
+    constructor(props) {
         super(props);
         this.state = {
             redirect: false
@@ -14,6 +14,11 @@ class PostForm extends Component {
     }
 
     handleOnSavePost(postData) {
+
+        if (!postData.category || postData.category === 'false') {
+            alert('Please select on category');
+            return;
+        }
 
         if (this.props.post) {
 
@@ -28,11 +33,11 @@ class PostForm extends Component {
         this.handleRedirectPost();
     }
 
-    handleRedirectPost () {
+    handleRedirectPost() {
 
         if (this.props.match.path === '/:category/:postId/edit') {
             this.props.history.goBack();
-        }else{
+        } else {
             this.setState({
                 redirect: true
             })
@@ -48,6 +53,11 @@ class PostForm extends Component {
                 <div className="form-group">
                     <label htmlFor="category" className='label-control'>Category</label>
                     <Field name="category" component="select" className='form-control' required>
+                        <option
+                            key=''
+                            value=""
+                        >Select a category
+                        </option>
                         {categories && categories.length > 0 && (
                             categories.map(category => (
                                 <option
@@ -60,22 +70,22 @@ class PostForm extends Component {
                 </div>
                 <div className="form-group">
                     <label htmlFor="title" className='label-control'>Title</label>
-                    <Field name="title" className='form-control' component="input" type="text"/>
+                    <Field name="title" className='form-control' component="input" type="text" required/>
                 </div>
                 <div className="form-group">
                     <label htmlFor="body" className='label-control'>Body</label>
-                    <Field name="body" className='form-control' component="input" type="text"/>
+                    <Field name="body" className='form-control' component="input" type="text" required/>
                 </div>
                 <div className="form-group">
                     <label htmlFor="author" className='label-control'>Author</label>
-                    <Field name="author" className='form-control' component="input" type="text"/>
+                    <Field name="author" className='form-control' component="input" type="text" required/>
                 </div>
                 <div className="form-group">
                     <button className={post ? 'btn btn-info mr-2' : 'btn btn-success mr-2'} type="submit">
                         {post ? 'Update' : 'Save'}
                     </button>
                     {this.state.redirect && (
-                        <Redirect to={`/`} />
+                        <Redirect to={`/`}/>
                     )}
                     <button type="button" className="btn btn-danger" onClick={() => this.props.history.goBack()}>
                         Cancel
