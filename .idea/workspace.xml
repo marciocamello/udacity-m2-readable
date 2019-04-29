@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3c5a1ae-be9c-4ac3-af09-ed3b98dbd1dd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Post/Page404.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Post/Page404.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Post/ViewPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Post/ViewPost.js" afterDir="false" />
-    </list>
+    <list default="true" id="e3c5a1ae-be9c-4ac3-af09-ed3b98dbd1dd" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -29,7 +24,7 @@
     <session id="1274543112">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="15" />
+          <entry key="project.closed" value="16" />
           <entry key="project.open.time.0" value="7" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.10" value="1" />
@@ -401,18 +396,17 @@
       <workItem from="1556478988980" duration="370000" />
       <workItem from="1556479362150" duration="402000" />
       <workItem from="1556508826669" duration="7011000" />
-      <workItem from="1556535972045" duration="478000" />
+      <workItem from="1556535972045" duration="568000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125961000" />
+    <option name="totallyTimeSpent" value="126051000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1014" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19477054" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19477054" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -424,7 +418,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.4366516" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.4366516" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />

@@ -25,7 +25,8 @@
     "cypress": "cypress open",
     "dev-docs": "vuepress dev docs",
     "build-docs": "vuepress build docs",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "prod": "node ../api/server.js & yarn start"
   },
   "eslintConfig": {
     "extends": "react-app"
