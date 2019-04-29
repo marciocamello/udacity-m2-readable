@@ -43,6 +43,7 @@ class ViewPost extends Component {
                                 <Page404
                                     categories={categories}
                                     filterPosts={true}
+                                    page="The post was not found"
                                 />
                             )}
                         </div>

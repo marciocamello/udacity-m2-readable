@@ -4,6 +4,8 @@ import BannerContainer from "../Banner/BannerContainer";
 import PostContainer from "../Post/PostContainer";
 import connect from "react-redux/es/connect/connect";
 import {filterPosts, savePostVote} from "../../actions/posts";
+import Post from "../Post/Post";
+import Page404 from "../Post/Page404";
 
 class Home extends Component {
 
@@ -14,32 +16,46 @@ class Home extends Component {
 
     render() {
 
-        const {posts, categories, postVote, handleRemovePost} = this.props;
+        const {posts, categories, loadingBar, postVote, handleRemovePost} = this.props;
 
         return (
             <main role="main" className="flex-shrink-0">
                 <div className="container">
-                    {this.props.match.params.category !== 'add-post' && (
-                        <CategoryContainer
-                            categories={categories}
-                            filterPosts={this.handleFilterPosts}
-                        />
+                    {loadingBar.default === 0 && (
+                        <div>
+                            {posts.length > 0 ? (
+                                <div>
+                                    {this.props.match.params.category !== 'add-post' && (
+                                        <CategoryContainer
+                                            categories={categories}
+                                            filterPosts={this.handleFilterPosts}
+                                        />
+                                    )}
+                                    <BannerContainer
+                                        posts={posts}
+                                    />
+                                    <PostContainer
+                                        posts={posts}
+                                        onPostVote={postVote}
+                                        onRemovePost={handleRemovePost}
+                                    />
+                                </div>
+                            ) : (
+                                <Page404
+                                    categories={categories}
+                                    filterPosts={true}
+                                    page="Don't exist posts to this category"
+                                />
+                            )}
+                        </div>
                     )}
-                    <BannerContainer
-                        posts={posts}
-                    />
-                    <PostContainer
-                        posts={posts}
-                        onPostVote={postVote}
-                        onRemovePost={handleRemovePost}
-                    />
                 </div>
             </main>
         )
     }
 }
 
-const mapStateToProps = ({categoriesReducer, postsReducer, commentsReducer}, ownProps) => {
+const mapStateToProps = ({loadingBar, categoriesReducer, postsReducer, commentsReducer}, ownProps) => {
 
     const {category} = ownProps.match.params;
     let filteredPosts = postsReducer.posts ? postsReducer.posts : [];
@@ -51,6 +67,7 @@ const mapStateToProps = ({categoriesReducer, postsReducer, commentsReducer}, own
     }
 
     return {
+        loadingBar,
         categories: categoriesReducer.categories ? categoriesReducer.categories : [],
         posts: filteredPosts.map(p => {
             if (post.id === p.id) {
