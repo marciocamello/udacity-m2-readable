@@ -16,7 +16,9 @@ export const getCommentById = commentId => {
         dispatch(showLoading());
         const comment = await API.comment(commentId);
         dispatch(reveiveComment(comment, commentId));
-        dispatch(hideLoading());
+        setTimeout(() => {
+            dispatch(hideLoading());
+        }, 1000);
     }
 };
 
@@ -35,7 +37,9 @@ export const getCommentsByPost = postId => {
         dispatch(showLoading());
         const comments = await API.postComments(postId);
         dispatch(reveiveComments(comments));
-        dispatch(hideLoading());
+        setTimeout(() => {
+            dispatch(hideLoading());
+        }, 1000);
     }
 };
 
@@ -50,10 +54,8 @@ export const receiveCommentVote = (comment) => {
 
 export const saveCommentVote = (commentId, option) => {
     return async (dispatch) => {
-        dispatch(showLoading());
         const comment = await API.commentVote(commentId, option);
         dispatch(receiveCommentVote(comment));
-        dispatch(hideLoading());
     }
 };
 
@@ -71,7 +73,9 @@ export const saveComment = commentData => {
         dispatch(showLoading());
         const newComment = await API.addComment(commentData);
         dispatch(receiveCommentAdd(newComment));
-        dispatch(hideLoading());
+        setTimeout(() => {
+            dispatch(hideLoading());
+        }, 1000);
     }
 };
 
@@ -90,7 +94,9 @@ export const editComment = (commentId, commentData) => {
         dispatch(showLoading());
         const updateComment = await API.editComment(commentId, commentData);
         dispatch(receiveCommentEdit(commentId, updateComment));
-        dispatch(hideLoading());
+        setTimeout(() => {
+            dispatch(hideLoading());
+        }, 1000);
     }
 };
 
@@ -109,6 +115,8 @@ export const removeComment = commentId => {
         dispatch(showLoading());
         const removeComment = await API.deleteComment(commentId);
         dispatch(receiveRemoveComment(commentId, removeComment));
-        dispatch(hideLoading());
+        setTimeout(() => {
+            dispatch(hideLoading());
+        }, 1000);
     }
 };

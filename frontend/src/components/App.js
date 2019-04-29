@@ -2,7 +2,6 @@ import React, {Component, Fragment} from 'react';
 import {Switch, Route, withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {handleInitialData} from "../actions/shared";
-import LoadingBar from 'react-redux-loading';
 
 // components
 import HeaderContainer from '../components/Header/HeaderContainer';
@@ -14,6 +13,8 @@ import {editComment, getCommentById, removeComment, saveComment} from "../action
 import EditPost from "./Post/EditPost";
 import EditComment from "./Comment/EditComment";
 import AddComment from "./Comment/AddComment";
+import Page404 from "./Post/Page404";
+import Loading from "./Loading/Loading";
 
 
 class App extends Component {
@@ -23,10 +24,13 @@ class App extends Component {
     }
 
     render() {
+
+        const {loadingBar} = this.props;
+
         return (
             <Switch>
                 <Fragment>
-                    <LoadingBar />
+                    <Loading isLoading={loadingBar.default}/>
                     <HeaderContainer/>
                     <Route exact path='/' render={props => <Home
                         {...props}
@@ -40,6 +44,10 @@ class App extends Component {
                         {...props}
                         categories={this.props.categories}
                         handleRemoveComment={this.props.removeComment}
+                    />}/>
+                    <Route exact path='/404' render={props => <Page404
+                        {...props}
+                        categories={this.props.categories}
                     />}/>
                     <Route exact path='/add-post' render={props => <AddPost
                         {...props}
@@ -70,7 +78,7 @@ class App extends Component {
     }
 }
 
-function mapStateToProps({categoriesReducer, postsReducer, commentsReducer}) {
+function mapStateToProps({categoriesReducer, postsReducer, commentsReducer, loadingBar}) {
 
     let posts = postsReducer.posts ? postsReducer.posts : [];
     let comment = commentsReducer.comment ? commentsReducer.comment : [];
@@ -79,6 +87,7 @@ function mapStateToProps({categoriesReducer, postsReducer, commentsReducer}) {
         categories: categoriesReducer.categories ? categoriesReducer.categories : [],
         posts,
         comment,
+        loadingBar
     }
 }
 

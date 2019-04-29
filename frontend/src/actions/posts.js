@@ -15,7 +15,9 @@ export const getPosts = () => {
         dispatch(showLoading());
         const posts = await API.posts();
         dispatch(receivePosts(posts));
-        dispatch(hideLoading());
+        setTimeout(() => {
+            dispatch(hideLoading());
+        }, 1000);
     }
 };
 
@@ -33,7 +35,9 @@ export const getPost = (postId) => {
         dispatch(showLoading());
         const post = await API.post(postId);
         dispatch(receivePost(post));
-        dispatch(hideLoading());
+        setTimeout(() => {
+            dispatch(hideLoading());
+        }, 1000);
     }
 };
 
@@ -71,7 +75,9 @@ export const filterPosts = (posts, filter) => {
                 dispatch(getPosts());
                 break;
         }
-        dispatch(hideLoading());
+        setTimeout(() => {
+            dispatch(hideLoading());
+        }, 1000);
     }
 };
 
@@ -86,10 +92,8 @@ export const receivePostVote = (post) => {
 
 export const savePostVote = (postId, option) => {
     return async (dispatch) => {
-        dispatch(showLoading());
         const post = await API.postVote(postId, option);
         dispatch(receivePostVote(post));
-        dispatch(hideLoading());
     }
 };
 
@@ -107,7 +111,9 @@ export const savePost = postData => {
         dispatch(showLoading());
         const newPost = await API.addPost(postData);
         dispatch(receivePostAdd(newPost));
-        dispatch(hideLoading());
+        setTimeout(() => {
+            dispatch(hideLoading());
+        }, 1000);
     }
 };
 
@@ -126,7 +132,9 @@ export const editPost = (postId, postData) => {
         dispatch(showLoading());
         const updatePost = await API.editPost(postId, postData);
         dispatch(receivePostEdit(postId, updatePost));
-        dispatch(hideLoading());
+        setTimeout(() => {
+            dispatch(hideLoading());
+        }, 1000);
     }
 };
 
@@ -144,6 +152,8 @@ export const removePost = postId => {
         dispatch(showLoading());
         const removePost = await API.deletePost(postId);
         dispatch(receiveRemovePost(removePost));
-        dispatch(hideLoading());
+        setTimeout(() => {
+            dispatch(hideLoading());
+        }, 1000);
     }
 };

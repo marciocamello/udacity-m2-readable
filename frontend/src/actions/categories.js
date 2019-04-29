@@ -15,7 +15,9 @@ export const getCategories = () => {
         dispatch(showLoading());
         const categories = await API.categories();
         dispatch(receiveCategories(categories));
-        dispatch(hideLoading());
+        setTimeout(() => {
+            dispatch(hideLoading());
+        }, 1000);
     }
 };
 
@@ -33,6 +35,8 @@ export const getCategoriesPosts = (category) => {
         dispatch(showLoading());
         const posts = await API.categoryPosts(category);
         dispatch(receiveCategoriesPosts(posts));
-        dispatch(hideLoading());
+        setTimeout(() => {
+            dispatch(hideLoading());
+        }, 1000);
     }
 };

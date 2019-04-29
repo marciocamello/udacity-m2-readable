@@ -4,6 +4,7 @@ import connect from "react-redux/es/connect/connect";
 import Post from "./Post";
 import {getCommentsByPost, saveCommentVote} from "../../actions/comments";
 import CategoryContainer from "../Category/CategoryContainer";
+import Page404 from "./Page404";
 
 class ViewPost extends Component {
 
@@ -14,30 +15,47 @@ class ViewPost extends Component {
     }
 
     render() {
-        const {categories, filterPosts, post, postId, postVote, commentVote, commentsPosts, removePost, handleRemoveComment} = this.props;
+
+        const {loadingBar, categories, filterPosts, post, postId, postVote, commentVote, commentsPosts, removePost, handleRemoveComment} = this.props;
+
         return (
-            <div className='container'>
-                <CategoryContainer
-                    categories={categories}
-                    filterPosts={filterPosts}
-                />
-                <Post
-                    post={post}
-                    postId={postId}
-                    onPostVote={postVote}
-                    commentsPosts={commentsPosts}
-                    onCommentVote={commentVote}
-                    onRemovePost={removePost}
-                    onRemoveComment={handleRemoveComment}
-                />
-            </div>
+            <React.Fragment>
+                <div className='container'>
+                    {loadingBar.default === 0 && (
+                        <div>
+                            {post && typeof post.id !== 'undefined' ? (
+                                <div>
+                                    <CategoryContainer
+                                        categories={categories}
+                                        filterPosts={filterPosts}
+                                    />
+                                    <Post
+                                        post={post}
+                                        postId={postId}
+                                        onPostVote={postVote}
+                                        commentsPosts={commentsPosts}
+                                        onCommentVote={commentVote}
+                                        onRemovePost={removePost}
+                                        onRemoveComment={handleRemoveComment}
+                                    />
+                                </div>
+                            ) : (
+                                <Page404
+                                    categories={categories}
+                                    filterPosts={true}
+                                />
+                            )}
+                        </div>
+                    )}
+                </div>
+            </React.Fragment>
         )
     }
 }
 
-function mapStateToProps({postsReducer, commentsReducer}, ownProps) {
+function mapStateToProps({postsReducer, commentsReducer, loadingBar}, ownProps) {
 
-    const post = postsReducer.post ? postsReducer.post : null;
+    let post = postsReducer.post ? postsReducer.post : null;
     let commentsPosts = commentsReducer.postComments ? commentsReducer.postComments : [];
     let comment = commentsReducer.comment ? commentsReducer.comment : [];
 
@@ -47,6 +65,7 @@ function mapStateToProps({postsReducer, commentsReducer}, ownProps) {
 
     return {
         post,
+        loadingBar,
         commentsPosts: commentsPosts.map(c => {
             if (comment.id === c.id) {
                 c.voteScore = comment.voteScore;
